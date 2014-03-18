@@ -1,7 +1,23 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(href='http://fonts.googleapis.com/css?family=Source+Code+Pro', rel='stylesheet', type='text/css')
+	body
+		.header#header
+			.logo-wrapper.pull-left
+				a.logo(href='/')
+					span Junior
+					span Development
+					span Lab
+			.nav-wrapper.pull-right
+				nav.navbar
+					ul.navbar-nav
+						li: a(href='#') Despre
+						li: a(href='#') Inscriere
+						li: a(href='#') Proiecte
+						li: a(href='#') Participanti
+						li: a(href='#') Blog
+						li: a(href='#') Contact
+		block content
