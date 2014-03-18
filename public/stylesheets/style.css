@@ -21,6 +21,24 @@ a {
 	float: right;
 }
 
+.container-fluid {
+	display: inline-block;
+	width: 100%;
+}
+
+.column-third {
+	float: left;
+	width: 33%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding: 10px;
+}
+
+.centre {
+	text-align: center;
+}
+
 /*
  * HEADER STYLES
  **/
@@ -83,11 +101,14 @@ a {
  **/
 
 .main {
-	/*font-family: Arial, sans-serif;*/
 	margin: 30px auto;
 }
 
 .main h1 {
 	font-size: 25px;
 	font-weight: normal;
+}
+
+.the-process .process-step img {
+	width: 40%;
 }
