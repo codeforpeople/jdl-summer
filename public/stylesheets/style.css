@@ -112,3 +112,53 @@ a {
 .the-process .process-step img {
 	width: 40%;
 }
+
+/*
+ * PROJECTS
+ **/
+
+.project {
+	padding: 20px 50px;
+	background-color: #fcfcfc;
+	margin-bottom: 15px;
+}
+
+.project-title {
+	margin: 5px 0px;
+}
+
+.project-title > a {
+	text-decoration: none;
+	color: #555;
+	cursor: pointer;
+}
+
+.project-title > a:hover {
+	text-decoration: underline;
+}
+
+.tag {
+	font-size: 11px;
+	padding: 3px;
+	background-color: #ddd;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.tag:hover {
+	background-color: #ccc;
+}
+
+p.project-mentor:before {
+	content: "Mentor: ";
+	font-weight: bold;
+}
+
+p.project-requirements:before {
+	content: "Cerinte: ";
+	font-weight: bold;
+}
+
+.project > .list {
+	margin: 0px;
+}
