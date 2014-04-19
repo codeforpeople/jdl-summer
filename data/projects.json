@@ -1,0 +1,36 @@
+{
+	"projects": [
+		{
+			"name": "Command line CHAT",
+			"id": "cmdchat",
+			"tags": [
+				"Linux",
+				"Socket programming",
+				"C/C++",
+				"Network"
+			],
+			"description": "Este din ce in ce mai clar faptul ca tot mai multe aplicatii din ziua de azi devin dependente de internet. Comunicarea in retea si schimbul de informatii in timp real stau la baza a majoritatea aplicatiilor pe care le folosim de zi cu zi, dar mai ales in industrie. Proiectul isi propune construirea unui chat simplu in terminal (linie de comanda, ecran negru cu text sau cum vreti sa il numiti) care sa demonstreze cel mai simplu model de comunicare in retea.",
+			"mentor": {
+				"name": "Alexandru Onea",
+				"email": "onea.alex@gmail.com"
+			}
+		},
+		{
+			"name": "Google Drive Document Editor",
+			"id": "doceditor",
+			"tags": [
+				"Web programming",
+				"HTML/CSS",
+				"PHP",
+				"MySQL",
+				"Cloud",
+				"Text editor"
+			],
+			"description": "Crearea unei aplicatii web, open - source, capabila sa reproduca  functionalitati de baza ale editorului de documente din Google Drive, respectiv ale aplicatiei Microsoft Office Word. Proiectul se va concentra pe frumos si util, simplu si functional.",
+			"mentor": {
+				"name": "Adrian Nenu",
+				"email": "adrian.nenu@gmail.com"
+			}
+		}
+	]
+}
