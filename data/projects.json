@@ -31,6 +31,21 @@
 				"name": "Adrian Nenu",
 				"email": "adrian.nenu@gmail.com"
 			}
+		},
+		{
+			"name": "Joc 3D",
+			"id": "3dgame",
+			"tags": [
+				"Linux",
+				"OpenGL",
+				"C/C++",
+				"Game development"
+			],
+			"description": "Jocurile pe care le jucam astazi dispun de grafica si realism extraordinare. Totusi, aceste lucruri nu au fost mereu asa. Acest proiect isi propune o calatorie in timp in lumea graficii pe calculator, precum si primii pasi in materie de proiectarea si dezvoltarea jocurilor grafice.",
+			"mentor": {
+				"name": "Alexandru Onea",
+				"email": "onea.alex@gmail.com"
+			}
 		}
 	]
 }
