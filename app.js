@@ -14,6 +14,7 @@ var app = express();
 routes.about = require('./routes/about');
 routes.apply = require('./routes/apply');
 routes.projects = require('./routes/projects');
+routes.contact = require('./routes/contact');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -36,6 +37,7 @@ app.get('/', routes.index);
 app.get('/about', routes.about);
 app.get('/apply', routes.apply);
 app.get('/projects', routes.projects);
+app.get('/contact', routes.contact);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
