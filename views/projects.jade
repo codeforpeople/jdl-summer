@@ -1,21 +1,28 @@
 extends layout
 
 block content
-	h1 Proiecte
-	p Lista completa cu proiectele propuse pentru aceasta editie se afla mai jos. Citeste cu atentie despre fiecare proiect inainte sa aplici, si asigura-te ca aplici doar pentru proiectele care sunt cele mai potrivite pentru tine si la care ai cele mai multe sanse.
 	.projects-wrapper
 		- if (data && typeof data !== "undefined")
 			- if (data.projects && typeof data.projects !== "undefined")
-				- for project in data.projects
-					.project
-						h3.project-title: a(href='#') #{project.name}
-						.tag-list
-							- for tagname in project.tags
-								span.tag #{tagname}
-						p.project-description= project.description
+				- if (data.index == -1)
+					h1 Proiecte
+					p Lista completa cu proiectele propuse pentru aceasta editie se afla mai jos. Citeste cu atentie despre fiecare proiect inainte sa aplici, si asigura-te ca aplici doar pentru proiectele care sunt cele mai potrivite pentru tine si la care ai cele mai multe sanse.
+					- for project in data.projects
+						.project
+							h3.project-title: a(href='/projects?id=#{project.id}') #{project.name}
+							.tag-list
+								- for tagname in project.tags
+									span.tag #{tagname}
+							p.project-description= project.description
+				- else
+					h1= data.projects[data.index].name
+					.tag-list
+						- for tagname in data.projects[data.index].tags
+							span.tag #{tagname}
+					p.project-description= data.projects[data.index].description
+					p.list.project-mentor: a(href='mailto:#{data.projects[data.index].mentor.email}') #{data.projects[data.index].mentor.name}
+					p.list.project-requirements Pasiune pt internet, retea si aplicatii care se bazeaza pe aceste lucruri. Entuziasm.
 			- else
 				p.error Ne pare rau, lista cu proiecte nu este momentan disponibila!
 		- else
 			p.error Eroare! Incearca mai tarziu!
-			//- p.list.project-mentor: a(href='mailto:onea.alex@gmail.com') Alexandru Onea
-			//- p.list.project-requirements Pasiune pt internet, retea si aplicatii care se bazeaza pe aceste lucruri. Entuziasm.
