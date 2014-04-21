@@ -162,3 +162,49 @@ p.project-requirements:before {
 .project > .list {
 	margin: 0px;
 }
+
+/*
+ * CONTACT STYLE
+ **/
+
+.column {
+	position: relative;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.right-column {
+	float: right;
+	padding-left: 30px;
+}
+
+.left-column {
+	float: left;
+	padding-right: 30px;
+}
+
+form.contact-form .form-input {
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	font: 14px "Source Code Pro", sans-serif;
+	padding: 5px;
+}
+
+.contact-form textarea {
+	height: 100px;
+}
+
+.btn {
+	font: 14px "Source Code Pro", sans-serif;
+	padding: 10px 15px;
+	cursor: pointer;
+	background-color: #ddd;
+	border: 1px solid #ccc;
+}
+
+.btn:hover {
+	background-color: #ccc;
+	border: 1px solid #bbb;
+}
