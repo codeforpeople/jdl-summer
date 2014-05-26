@@ -2,7 +2,6 @@ body {
 	margin: 0px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	height: 100%;
-	overflow: hidden;
 }
 
 a {
@@ -16,11 +15,15 @@ a {
 
 section#cover {
 	position: relative;
-	height: 1131px;
+	height: 731px;
 	width: 100%;
 	background-image: url('../images/blackboard.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+
+section#about {
+	background-color: #eee;
 }
 
 nav.navigation-bar {
@@ -87,13 +90,16 @@ nav.navigation-bar ul.nav li .navigation-icon {
 }
 
 .main-wrapper {
-	padding: 150px;
+	margin: 0 auto;
+	max-width: 1024px;
+	padding: 180px 0px;
 }
 
 .btn-apply {
 	font-family: 'Asap', sans-serif;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 19px;
+	letter-spacing: 1px;
 	margin: 30px auto;
 	padding: 15px 30px;
 	color: #eee;
