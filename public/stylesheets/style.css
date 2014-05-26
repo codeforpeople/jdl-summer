@@ -1,8 +1,109 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	height: 100%;
+	overflow: hidden;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
+}
+
+.centre {
+	display: block;
+	margin: 0 auto;
+}
+
+section#cover {
+	position: relative;
+	height: 1131px;
+	width: 100%;
+	background-image: url('../images/blackboard.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+nav.navigation-bar {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	z-index: 1000;
+	background-color: rgba(0, 0, 0, .3);
+	border-bottom: 1px solid #444;
+	height: 75px;
+}
+
+nav.navigation-bar .collapse {
+	position: relative;
+	margin: 0px auto;
+}
+
+nav.navigation-bar ul.nav {
+	display: table;
+	float: none;
+	margin: 0px auto;
+}
+
+nav.navigation-bar ul.nav li a:hover {
+	
+}
+
+nav.navigation-bar ul.nav li a {
+	color: #aaa;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Asap', sans-serif;
+	font-size: 13px;
+	display: block;
+	float: left;
+	width: 115px;
+}
+
+nav.navigation-bar ul.nav li a:hover {
+	color: #fff;
+	box-shadow: inset 0 -5px 0 0 #aaa;
+}
+
+nav.navigation-bar ul.nav li .navigation-icon {
+	height: 20px;
+	margin-bottom: 5px;
+}
+
+.main-title {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+.main-title span {
+	font-family: 'Asap', sans-serif;
+	font-size: 73px;
+	color: #eee;
+	display: block;
+	clear: both;
+	float: none;
+}
+
+.main-wrapper {
+	padding: 150px;
+}
+
+.btn-apply {
+	font-family: 'Asap', sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin: 30px auto;
+	padding: 15px 30px;
+	color: #eee;
+	background-color: rgba(238, 238, 238, 0);
+	border: 1px solid #eee;
+	-webkit-transition-duration: .1s;
+}
+
+.btn-apply:hover {
+	color: #333;
+	background-color: rgba(238, 238, 238, 1);
+	-webkit-transition-duration: .2s;
 }
