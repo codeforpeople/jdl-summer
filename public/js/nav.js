@@ -21,7 +21,7 @@ define(function () {
 
 			ajustNavStyle();
 
-			$('nav ul li a, nav ul li span, ul.nav li span, ul.nav li a').click(function(e){
+			$('nav ul li a, nav ul li span, ul.nav li span, ul.nav li a, .btn.btn-link').click(function(e){
 				$('html, body').animate({
 					scrollTop: $($.attr(this, 'href')).offset().top - 75
 				}, 500);

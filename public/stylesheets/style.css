@@ -1,3 +1,15 @@
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/Roboto.woff');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/RobotoLight.woff');
+	font-weight: 300;
+}
+
 body {
 	margin: 0px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -22,8 +34,29 @@ section#cover {
 	background-size: 100%;
 }
 
+section#blog {
+	background-color: #428bca;
+}
+
 section#about {
 	background-color: #eee;
+}
+
+section#projects {
+	background-color: #dbdbdb;
+}
+
+section#participants {
+	background-color: #5bc0de;
+}
+
+section#contact {
+	background-color: #d9534f;
+}
+
+.inverted {
+	color: #fff !important;
+	border-color: #fff !important;
 }
 
 nav.navigation-bar {
@@ -72,6 +105,10 @@ nav.navigation-bar ul.nav li .navigation-icon {
 	margin-bottom: 5px;
 }
 
+.btn-link:hover {
+	text-decoration: none;
+}
+
 .main-title {
 	position: relative;
 	display: block;
@@ -105,6 +142,15 @@ section .page .section-title {
 	text-align: center;
 	font-size: 70px;
 	font-weight: 100;
+	font-family: 'Roboto', sans-serif;
+}
+
+section .page .section-subtitle {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 300;
 }
 
 section .page .section-title:after {
@@ -116,6 +162,10 @@ section .page .section-title:after {
 	width: 450px;
 	height: 15px;
 	border-bottom: 2px solid #999;
+}
+
+section .page .section-title.inverted:after {
+	border-bottom: 2px solid #fff;
 }
 
 .btn-apply {
@@ -138,7 +188,7 @@ section .page .section-title:after {
 	-webkit-transition-duration: .2s;
 }
 
-.process-box {
+.process-box, .projects-grid {
 	margin-top: 100px;
 }
 
@@ -161,4 +211,65 @@ section .page .section-title:after {
 	text-align: center;
 	max-width: 150px;
 	font-size: 18px;
+}
+
+.projects-grid {
+	width: 100%;
+	display: inline-block;
+}
+
+.project-box {
+	margin: 0px;
+	padding: 0px;
+	/*margin-bottom: 10px;*/
+}
+
+.project-box {
+	padding: 5px;
+}
+
+.project {
+	position: relative;
+	display: block;
+	height: 430px;
+	background-color: #eee;
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.project:hover > .tile-cover{
+	background-color: rgba(0, 0, 0, .4);
+}
+
+.project-cover, .tile-cover {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	pointer-events: none;
+}
+
+.project-info {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 116px;
+	padding: 10px;
+	color: #000;
+	background-color: #fff;
+	border-top: 1px solid #aaa;
+	/*background-color: rgba(0, 0, 0, .6);*/
+	z-index: 101;
+}
+
+.project-title {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.tile-cover {
+	z-index: 100;
 }
