@@ -23,6 +23,7 @@ a {
 .centre {
 	display: block;
 	margin: 0 auto;
+	text-align: center;
 }
 
 section#cover {
@@ -46,7 +47,7 @@ section#projects {
 	background-color: #dbdbdb;
 }
 
-section#participants {
+section#mentors {
 	background-color: #5bc0de;
 }
 
@@ -54,7 +55,7 @@ section#contact {
 	background-color: #d9534f;
 }
 
-.inverted {
+.inverted, .inverted > * {
 	color: #fff !important;
 	border-color: #fff !important;
 }
@@ -151,6 +152,13 @@ section .page .section-subtitle {
 	text-align: center;
 	font-size: 40px;
 	font-weight: 300;
+	margin: 35px auto;
+}
+
+section .small {
+	font-size: 25px !important;
+	max-width: 600px;
+	display: block !important;
 }
 
 section .page .section-title:after {
@@ -168,7 +176,7 @@ section .page .section-title.inverted:after {
 	border-bottom: 2px solid #fff;
 }
 
-.btn-apply {
+.btn-apply, .btn-send-message {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -182,7 +190,7 @@ section .page .section-title.inverted:after {
 	-webkit-transition-duration: .1s;
 }
 
-.btn-apply:hover {
+.btn-apply:hover, .btn-send-message:hover {
 	color: #333;
 	background-color: rgba(238, 238, 238, 1);
 	-webkit-transition-duration: .2s;
@@ -272,4 +280,80 @@ section .page .section-title.inverted:after {
 
 .tile-cover {
 	z-index: 100;
+}
+
+.mentor {
+	position: relative;
+	text-align: center;
+}
+
+.mentor-photo-box {
+	text-align: center;
+}
+
+.mentor-photo {
+	max-width: 300px;
+	max-height: 300px;
+	width: 100%;
+	position: relative;
+	border-radius: 1000px;
+	border: 3px solid #eee;
+	height: 100%;
+	text-align: center;
+}
+
+.mentor-name, .mantor-info {
+	display: inline-block;
+	width: 100%;
+	margin: 10px auto;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+	outline: 0;
+	border-color: #ccc;
+	box-shadow: none !important;
+}
+
+form.contact-form {
+	display: inline-block;
+	width: 100%;
+}
+
+form .input-group {
+	width: 50%;
+	box-sizing: border-box;
+	padding: 10px;
+	float: left;
+}
+
+form .input-group-addon {
+	width: 50px;
+	border-right: none;
+	background: #fff;
+}
+
+form .input-group-addon > .glyphicon{
+	color: #aaa;
+	font-family: 'Glyphicons Halflings';
+}
+
+form .input-group .form-control {
+	width: 100%;
+	padding-left: 0px;
+	border-left: none;
+	background: #fff;
+}
+
+.pull-top {
+	vertical-align: top;
+}
+
+.pull-top > .glyphicon {
+	margin-top: 10px;
+}
+
+.full-width {
+	width: 100% !important;
+	max-width: 100%;
+	resize: none !important;
 }

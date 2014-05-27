@@ -89,12 +89,37 @@ block content
 						.project-info
 							h4.project-title Code a lot
 							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur
-	section#participants
+	section#mentors
 		.page
-			h1.section-title.inverted Participanți
+			h1.section-title.inverted Cine suntem și ce facem?
+			h3.section-subtitle.small.inverted.
+				Suntem o mână de oameni, fiecare pasionat de ceva anume și suntem dispuși să împărțim tot ceea ce știm
+			.row.mentors-grid.inverted
+				.col-md-4.mentor-box
+					.mentor
+						.mentor-photo-box
+							img.mentor-photo(src='/images/mentors/alex.jpg')
+						h4.mentor-name Alexandru Onea
+						p.mentor-info School of Computer Science, University Of Manchester, Anul 2
 	section#blog
 		.page
 			h1.section-title.inverted Ne mândrim cu ceea ce facem
 	section#contact
 		.page
-			h1.section-title.inverted Suntem prietenoși
+			h1.section-title.inverted Suntem prietenoși și sociabili
+			h3.section-subtitle.inverted.small.
+				Ne place să stăm de vorbă. Întrebări, sugestii, reclamații, sau un simplu salut, nu ezita să ne scrii.
+			form.contact-form.form-inline
+				.input-group
+					snap.input-group-addon: span.glyphicon.glyphicon-user
+					input.form-control.input-lg(type='text', placeholder='Numele tau...')
+				.input-group
+					span.input-group-addon: span.glyphicon.glyphicon-envelope
+					input.form-control.input-lg(type='text', placeholder='Adresa de email...')
+				.input-group.full-width
+					span.input-group-addon.pull-top: span.glyphicon.glyphicon-comment
+					textarea.form-control.input-lg(placeholder='Mesajul tau', rows='5')
+				.input-group.full-width.centre
+					button.btn.btn-lg.btn-send-message Trimite
+			p.footer.inverted.centre
+				span © 2014 Alexandru Onea. All rights reserved.
