@@ -282,23 +282,29 @@ section .page .section-title.inverted:after {
 	z-index: 100;
 }
 
+.mentors-grid {
+	margin-top: 150px;
+}
+
 .mentor {
 	position: relative;
 	text-align: center;
 }
 
 .mentor-photo-box {
+	display: inline-block;
 	text-align: center;
+	border-radius: 1000px;
+	overflow: hidden;
+	width: 280px;
+	height: 280px;
+	border: 3px solid #eee;
 }
 
 .mentor-photo {
-	max-width: 300px;
-	max-height: 300px;
 	width: 100%;
-	position: relative;
-	border-radius: 1000px;
-	border: 3px solid #eee;
 	height: 100%;
+	position: relative;
 	text-align: center;
 }
 
