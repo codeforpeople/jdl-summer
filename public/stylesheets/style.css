@@ -48,11 +48,11 @@ section#projects {
 }
 
 section#mentors {
-	background-color: #5bc0de;
+	background-color: #1abc9c;
 }
 
 section#contact {
-	background-color: #d9534f;
+	background-color: #5bc0de;
 }
 
 .inverted, .inverted > * {
