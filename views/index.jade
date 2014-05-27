@@ -3,15 +3,31 @@ extends layout
 block content
 	include navigation
 	section#cover
-		.main-wrapper
+		.page
 			h1.main-title
 				span Junior
 				span Development
 				span Labs
-			button.btn.btn-lg.centre.btn-apply Aplica acum
+			button.btn.btn-lg.centre.btn-apply Aplică acum
 	section#about
-		.main-wrapper
-			h1 Text
+		.page
+			h1.section-title Între liceu și facultate
+			.row.process-box
+				.col-md-4.process-step
+					img.process-step-image(src='/images/process/apply.png')
+					h4.process-step-caption Aplică
+					p.process-step-description.
+						la unul dintre proiectele propuse de mentori
+				.col-md-4.process-step
+					img.process-step-image(src='/images/process/work.png')
+					h4.process-step-caption Lucrează
+					p.process-step-description.
+						împreuna cu mentorul tău pe durata programului
+				.col-md-4.process-step
+					img.process-step-image(src='/images/process/win.png')
+					h4.process-step-caption Câștigă
+					p.process-step-description.
+						experiență și un avantaj față de ceilalți
 	section#projects
-		.main-wrapper
+		.page
 			h1 Text
