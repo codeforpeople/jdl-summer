@@ -2,13 +2,34 @@ define(function () {
 	var nav = function () {
 
 		var navHandler = document.querySelector('.navigation-bar');
+		var navColor = 1;
 
-		var onScrollEvent = function (e) {
-			console.log(e);
+		var ajustNavStyle = function (e) {
+			var offsetX = $(window).scrollTop();
+
+			if (offsetX > 650 && navColor === 0) {
+				$(navHandler).css('background-color', 'rgba(0, 0, 0, .8)');
+				navColor = 1;
+				console.log(navHandler);
+			} else if (offsetX < 650 && navColor === 1) {
+				$(navHandler).css('backgroundColor', 'rgba(0, 0, 0, .3)');
+				navColor = 0;
+			}
 		};
 
 		var init = function() {
-			$(document).on('scroll', document, onScrollEvent);
+
+			ajustNavStyle();
+
+			$('nav ul li a, nav ul li span, ul.nav li span, ul.nav li a').click(function(e){
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top - 75
+				}, 500);
+				e.preventDefault();
+				return false;
+			});
+
+			$(document).on('scroll', document, ajustNavStyle);
 		}
 
 		return {
