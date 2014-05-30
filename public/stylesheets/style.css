@@ -363,3 +363,8 @@ form .input-group .form-control {
 	max-width: 100%;
 	resize: none !important;
 }
+
+.footer-info .col-md-4 {
+	margin: 0px 0px 50px 0px;
+	padding: 10px;
+}
