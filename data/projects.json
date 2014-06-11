@@ -4,7 +4,7 @@
 		"name": "Ancient chat",
 		"shortDescription": "Aplicație chat simplă în terminal text realizată în C/C++",
 		"longDescription": "Este din ce în ce mai clar faptul că tot mai multe aplicații din ziua de azi devin dependente de internet. Comunicarea în rețea și schimbul de informații în timp real stau la baza a majoritatea aplicațiilor pe care le folosim de zi cu zi, dar mai ales în industrie. Proiectul își propune construirea unui chat simplu în terminal (linie de comandă, ecran negru cu text sau cum vreți să îl numiți) care să demonstreze cel mai simplu model de comunicare în rețea.",
-		"coverPhoto": "",
+		"coverPhoto": "/images/projects/covers/ancient_chat.jpg",
 		"mentor": {
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"
