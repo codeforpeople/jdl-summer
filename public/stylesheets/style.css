@@ -26,11 +26,27 @@ a {
 	text-align: center;
 }
 
+.mask {
+	width: 100%
+}
+
+.mask:after {
+	content: "";
+	background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQIW2NkYGD4D8SM6DRIAAQwJDFUwhRRUQcALRkSBISGlPAAAAAASUVORK5CYII=") repeat top left;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: .5;
+}
+
 section#cover {
 	position: relative;
 	height: 731px;
 	width: 100%;
-	background-image: url('../images/blackboard.jpg');
+	background-image: url('../images/bk.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -65,7 +81,7 @@ nav.navigation-bar {
 	left: 0px;
 	right: 0px;
 	z-index: 1000;
-	background-color: rgba(0, 0, 0, 1);
+	background-color: rgba(0, 0, 0, .8);
 	border-bottom: 1px solid #444;
 	height: 75px;
 }
@@ -177,6 +193,7 @@ section .page .section-title.inverted:after {
 }
 
 .btn-apply, .btn-send-message {
+	position: relative;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -400,4 +417,13 @@ form .input-group .form-control {
 
 .mail-contact {
 	background-image: url('../images/social/mail.png');
+}
+
+.fb-like-box {
+	background: #fff;
+	width: 100%;
+}
+
+.footer-info .row .col-md-4 p {
+	margin-bottom: 20px;
 }

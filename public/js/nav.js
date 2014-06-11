@@ -12,7 +12,7 @@ define(function () {
 				navColor = 1;
 				console.log(navHandler);
 			} else if (offsetX < 650 && navColor === 1) {
-				$(navHandler).css('backgroundColor', 'rgba(0, 0, 0, .3)');
+				$(navHandler).css('backgroundColor', 'rgba(0, 0, 0, .8)');
 				navColor = 0;
 			}
 		};

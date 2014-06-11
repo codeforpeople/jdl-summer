@@ -1,8 +1,18 @@
 extends layout
 
 block content
+	.fb-root
+	script.
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=486611214805928&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	include navigation
 	section#cover
+		.mask
 		.page
 			h1.main-title
 				span Junior
@@ -92,17 +102,18 @@ block content
 				.footer-info
 					.row.inverted
 						.col-md-4
-							p Eveniment organizat in parteneriat cu
+							p.centre Eveniment organizat in parteneriat cu
 						.col-md-4
-							p Sponsori
+							p.centre Sponsori
 						.col-md-4
-							p Social
-				span.centre.inverted
-					a(href='#') Regulament
-					span  | 
-					a(href='/apply/mentor') Vreau sa devin mentor
-					span  | 
-					a(href='#') Vreau sa ma implic
-					span  |  
-					a(href='#') Donatii
+							p.centre Social
+								.fb-like-box(data-href='https://www.facebook.com/JuniorDevelopmentLabs', data-colorscheme='light', data-show-faces='false', data-header='false', data-stream='false', data-show-border='true')
+				//- span.centre.inverted
+				//- 	a(href='#') Regulament
+				//- 	span  | 
+				//- 	a(href='/apply/mentor') Vreau sa devin mentor
+				//- 	span  | 
+				//- 	a(href='#') Vreau sa ma implic
+				//- 	span  |  
+				//- 	a(href='#') Donatii
 				span.centre.inverted © 2014 Alexandru Onea. All rights reserved.

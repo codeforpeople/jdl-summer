@@ -40,5 +40,33 @@
 		"skills-needed": [
 			"entuziasm", "fizică elementară", "trigonometrie", "pasiune pentru inginerie și programarea low-level"
 		]
+	},
+	{
+		"id": "scaleupanddown",
+		"name": "Scaling up and down",
+		"shortDescription": "Aprecierea unei scări, de la 1:1 până la 1:10",
+		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de utiliza spațiul doar pentru strictul necesar.",
+		"coverPhoto": "/images/projects/covers/scale_up_and_down.jpg",
+		"mentor": {
+			"name": "Cosmin Chirpac",
+			"email": "cosminchirpac@icloud.com"
+		},
+		"skills-needed": [
+			"matematică simplă", "devotament"
+		]
+	},
+	{
+		"id": "renderingtutorials",
+		"name": "Rendering tutorials",
+		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
+		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
+		"coverPhoto": "/images/projects/covers/rendering_tutorials.jpg",
+		"mentor": {
+			"name": "Cosmin Chirpac",
+			"email": "cosminchirpac@icloud.com"
+		},
+		"skills-needed": [
+			"aptitudini pe calculator", "devotament"
+		]
 	}
 ]
