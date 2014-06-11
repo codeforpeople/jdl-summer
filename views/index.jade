@@ -33,62 +33,14 @@ block content
 		.page
 			h1.section-title Alege proiectul tău
 			.projects-grid
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/1.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/2.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur	
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/3.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur	
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/4.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur	
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/3.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur	
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/4.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur	
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/1.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur
-				.col-md-4.project-box
-					.project
-						.tile-cover
-						img.project-cover(src='/images/projects/covers/2.jpg')
-						.project-info
-							h4.project-title Code a lot
-							p.project-description Mult codat face rau la ficat dar e bine de codat pentru ca nu mori singur
+				- for project in projects
+					.col-md-4.project-box
+						.project(id='#{project.id}')
+							.tile-cover
+							img.project-cover(src='/images/projects/covers/1.jpg')
+							.project-info
+								h4.project-title #{project.name}
+								p.project-description #{project.shortDescription}
 	section#mentors
 		.page
 			h1.section-title.inverted Cine suntem și ce facem?
@@ -148,7 +100,7 @@ block content
 				span.centre.inverted
 					a(href='#') Regulament
 					span  | 
-					a(href='#') Vreau sa devin mentor
+					a(href='/apply/mentor') Vreau sa devin mentor
 					span  | 
 					a(href='#') Vreau sa ma implic
 					span  |  
