@@ -18,7 +18,7 @@
 		"name": "Ancient pixels",
 		"shortDescription": "Joc grafic simplu sau lume grafică realizată în C/C++ cu ajutorul bibelotecii OpenGL",
 		"longDescription": "Jocurile pe care le jucăm astăzi dispun de grafică și realism extraordinare. Totuși, aceste lucruri nu au fost mereu așa. Acest proiect își propune o călătorie în timp în lumea graficii pe calculator, precum și primii pași în materie de proiectarea și dezvoltarea jocurilor grafice",
-		"coverPhoto": "",
+		"coverPhoto": "/images/projects/covers/ancient_pixels.jpg",
 		"mentor": {
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"
@@ -32,7 +32,7 @@
 		"name": "Ancient Intelligence",
 		"shortDescription": "Aplicație care crează iluzia unui cub 3D care se rotește în funcție de mișcările utilizatorului",
 		"longDescription": "Inteligența artificială este un domeniu extrem de vast, având aplicații în aproape orice domeniu. Proiectul acesta propune o privire de ansamblu asupra unui subdomeniu, Computer Vision, care se ocupă cu extragerea informațiilor relevante din imagini și video. Cu ajutorul unei camere web putem avea imagini în timp real cu poziția utilizatorului, din care se pot extrage informații despre orientarea capului acestuia. În funcție de orientarea capului, aplicația va roti un cub pe ecran, astfel încât dacă utilizatorul se întoarce spre stânga, acesta va vedea partea stângă a cubului, și invers.",
-		"coverPhoto": "",
+		"coverPhoto": "/images/projects/covers/ancient_intelligence.jpg",
 		"mentor": {
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"

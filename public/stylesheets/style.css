@@ -256,7 +256,7 @@ section .page .section-title.inverted:after {
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	height: 100%;
+	width: 100%;
 	pointer-events: none;
 }
 
