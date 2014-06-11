@@ -11,9 +11,9 @@ var path = require('path');
 
 var app = express();
 
-routes.apply = {
-	mentor: require('./routes/apply/mentor')
-};
+// routes.apply = {
+// 	mentor: require('./routes/apply/mentor')
+// };
 
 // all environments
 app.set('port', process.env.PORT || 3000);
