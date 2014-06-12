@@ -46,6 +46,10 @@ block content
 				- for project in projects
 					.col-md-4.project-box
 						.project(id='#{project.id}')
+							.test
+								.controls
+									button.btn-default.btn-lg.btn-project-details(data-toggle='modal', data-target='#project-details-modal') Detalii
+									button.btn-success.btn-lg.btn-project-apply Aplică
 							.tile-cover
 							img.project-cover(src='#{project.coverPhoto}')
 							.project-info
@@ -117,3 +121,15 @@ block content
 				//- 	span  |  
 				//- 	a(href='#') Donatii
 				span.centre.inverted © 2014 Alexandru Onea. All rights reserved.
+
+	.modal.fade#project-details-modal(tab-index='-1', role='dialog', aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+					h4.modal-title Project title
+				.modal-body
+					p Project description
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Înapoi
+					button.btn.btn-success(type='button') Aplică

@@ -68,5 +68,33 @@
 		"skills-needed": [
 			"aptitudini pe calculator", "devotament"
 		]
+	},
+	{
+		"id": "nodejschat",
+		"name": "NodeJS Chat",
+		"shortDescription": "Aplicație chat în browser realizată cu ajutorul platformei NodeJS",
+		"longDescription": "Facebook este doar unul dintre site-urile care oferă live chat utilizatorilor săi, iar acest lucru a accelerat succesul acestuia fără îndoială. Nevoia de comunicare crează cerere pentru astfel de aplicații, iar tehnologiile din ziua de azi fac din ce în ce mai ușoară dezvoltarea de astfel de servicii. NodeJS este o tehnologie relativ recentă dar cu un potențial enorm, care vine ca o alternativă la restul tehnologiile de back-end (cum ar fi PHP, Java, Python). Bazată pe JavaScript, platforma este extrem de puternică și facilitează dezvoltarea serviciilor precum chat-ul.",
+		"coverPhoto": "/images/projects/covers/nodejs_chat.jpg",
+		"mentor": {
+			"name": "Adrian Nenu",
+			"email": "adrian.nenu@gmail.com"
+		},
+		"skills-needed": [
+			"pasiune pentru dezvoltarea de aplicații web", "cunoștințe minime de JavaScript"
+		]
+	},
+	{
+		"id": "browsergame",
+		"name": "Browser Game",
+		"shortDescription": "Joc simplu în browser bazat pe comenzi text",
+		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe comenzi text. Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile in browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights.",
+		"coverPhoto": "/images/projects/covers/browser_game.jpg",
+		"mentor": {
+			"name": "Adrian Nenu",
+			"email": "adrian.nenu@gmail.com"
+		},
+		"skills-needed": [
+			"pasiune pentru dezvoltarea de aplicații web", " întelegere de bază a structurii unei pagini HTML"
+		]
 	}
 ]
