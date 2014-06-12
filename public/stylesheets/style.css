@@ -467,3 +467,7 @@ form .input-group .form-control {
 	margin-bottom: 10px;
 	-webkit-transition-duration: .1s;
 }
+
+#project-details-modal .modal-dialog{
+	width: 90%;
+}

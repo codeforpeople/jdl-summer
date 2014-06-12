@@ -17,6 +17,30 @@ define(function () {
 			}
 		};
 
+		var loadProjectDetails = function (e) {
+			var id = $(this).parents('.project').attr('id');
+
+			$('#project-details-modal .modal-title').text('Loading...');
+			$('#project-details-modal .modal-body').text('Loading...');
+			
+			$.ajax({
+				type: 'post',
+				url: '/sync',
+				data: {id: id},
+				dataType: 'json',
+				success: function (res) {
+					console.log(res);
+					if (res.status === 0) {
+						$('#project-details-modal .modal-title').text(res.data.name);
+						$('#project-details-modal .modal-body').text(res.data.longDescription);
+					}
+				},
+				error: function (a,b,c) {
+					$('#project-details-modal .modal-body').text(c);
+				}
+			});
+		};
+
 		var init = function() {
 
 			ajustNavStyle();
@@ -29,6 +53,7 @@ define(function () {
 				return false;
 			});
 
+			$(document).on('click', '.btn-project-details', loadProjectDetails);
 			$(document).on('scroll', document, ajustNavStyle);
 		}
 

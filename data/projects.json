@@ -45,7 +45,7 @@
 		"id": "scaleupanddown",
 		"name": "Scaling up and down",
 		"shortDescription": "Aprecierea unei scări, de la 1:1 până la 1:10",
-		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de utiliza spațiul doar pentru strictul necesar.",
+		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de a utiliza spațiul doar pentru strictul necesar.",
 		"coverPhoto": "/images/projects/covers/scale_up_and_down.jpg",
 		"mentor": {
 			"name": "Cosmin Chirpac",

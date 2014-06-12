@@ -11,9 +11,7 @@ var path = require('path');
 
 var app = express();
 
-// routes.apply = {
-// 	mentor: require('./routes/apply/mentor')
-// };
+routes.sync = require('./routes/sync');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -34,6 +32,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.post('/sync', routes.sync);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
