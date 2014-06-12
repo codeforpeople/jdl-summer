@@ -9,7 +9,7 @@
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"entuziasm", "pasiune pentru programarea aplicațiilor bazate pe rețea"
 		]
 	},
@@ -23,7 +23,7 @@
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"entuziasm", "pasiune pentru grafică pe calculator", "noțiuni de calcul cu matrice", "fizică elementară", "trigonometrie"
 		]
 	},
@@ -37,7 +37,7 @@
 			"name": "Alexandru Onea",
 			"email": "onea.alex@gmail.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"entuziasm", "fizică elementară", "trigonometrie", "pasiune pentru inginerie și programarea low-level"
 		]
 	},
@@ -51,7 +51,7 @@
 			"name": "Cosmin Chirpac",
 			"email": "cosminchirpac@icloud.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"matematică simplă", "devotament"
 		]
 	},
@@ -65,7 +65,7 @@
 			"name": "Cosmin Chirpac",
 			"email": "cosminchirpac@icloud.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"aptitudini pe calculator", "devotament"
 		]
 	},
@@ -79,7 +79,7 @@
 			"name": "Adrian Nenu",
 			"email": "adrian.nenu@gmail.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"pasiune pentru dezvoltarea de aplicații web", "cunoștințe minime de JavaScript"
 		]
 	},
@@ -93,7 +93,7 @@
 			"name": "Adrian Nenu",
 			"email": "adrian.nenu@gmail.com"
 		},
-		"skills-needed": [
+		"skillsNeeded": [
 			"pasiune pentru dezvoltarea de aplicații web", " întelegere de bază a structurii unei pagini HTML"
 		]
 	}

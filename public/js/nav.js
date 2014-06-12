@@ -17,6 +17,42 @@ define(function () {
 			}
 		};
 
+		var createDescription = function (desc, mentor, skills) {
+			description = document.createElement('p');
+			description.innerHTML = desc;
+
+			mentorBox = document.createElement('div');
+			mentorBox.classList.add('mentor-info');
+
+			mentorName = document.createElement('p');
+			mentorName.classList.add('mentor-name');
+			mentorName.innerHTML = mentor.name;
+
+			mentorEmail = document.createElement('p');
+			mentorEmail.classList.add('mentor-email');
+			mentorEmail.innerHTML = mentor.email;
+
+			skillsList = document.createElement('div');
+			skillsList.classList.add('skill-list');
+
+			for (var i = skills.length - 1; i >= 0; i--) {
+				var skill = document.createElement('span');
+				skill.classList.add('skill-item');
+				skill.innerHTML = skills[i];
+				skillsList.appendChild(skill);
+			};
+
+			mentorBox.appendChild(mentorName);
+			mentorBox.appendChild(mentorEmail);
+
+			mainBody = document.querySelector('#project-details-modal .modal-body');
+			mainBody.innerHTML = '';
+
+			mainBody.appendChild(description);
+			mainBody.appendChild(mentorBox);
+			mainBody.appendChild(skillsList);
+		}
+
 		var loadProjectDetails = function (e) {
 			var id = $(this).parents('.project').attr('id');
 
@@ -32,7 +68,7 @@ define(function () {
 					console.log(res);
 					if (res.status === 0) {
 						$('#project-details-modal .modal-title').text(res.data.name);
-						$('#project-details-modal .modal-body').text(res.data.longDescription);
+						createDescription(res.data.longDescription, res.data.mentor, res.data.skillsNeeded);
 					}
 				},
 				error: function (a,b,c) {

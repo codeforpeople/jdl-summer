@@ -471,3 +471,8 @@ form .input-group .form-control {
 #project-details-modal .modal-dialog{
 	width: 90%;
 }
+
+#project-details-modal .modal-content {
+	font-family: 'Roboto', sans-serif;
+	border-radius: 3px;
+}
