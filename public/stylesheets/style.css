@@ -476,3 +476,30 @@ form .input-group .form-control {
 	font-family: 'Roboto', sans-serif;
 	border-radius: 3px;
 }
+
+#project-details-modal h4.modal-title {
+	font-size: 40px;
+}
+
+#project-details-modal .mentor-name:before {
+	content: "Mentor: ";
+	font-weight: bold;
+}
+
+#project-details-modal .mentor-email:before {
+	content: "E-mail: ";
+	font-weight: bold;
+}
+
+#project-details-modal .skill-list:before {
+	content: "Ce trebuie să ai: ";
+	font-weight: bold;
+}
+
+#project-details-modal .skill-list span:after {
+	content: ", ";
+}
+
+#project-details-modal .skill-list span:last-child:after {
+	content: "";
+}
