@@ -20,6 +20,7 @@ var FACEBOOK_CALLBACK = 'http://localhost:3000/auth/facebook/callback';
 routes.sync = require('./routes/sync');
 routes.check = require('./routes/check');
 routes.auth = require('./routes/auth');
+routes.apply = require('./routes/apply');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -68,13 +69,14 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'public_profile', 'user_education_history', 'user_birthday'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { scope: ['email', 'public_profile', 'user_education_history', 'user_birthday'] }), function (req, res) {
-	if (req.session.passport.user) console.log(req.session.passport.user);
+	if (req.session.passport.user) console.log(req.session.passport.user['_json'].education);
 	res.end('<script>window.close();</script>');
 });
 app.get('/auth', routes.auth);
 
 app.post('/sync', routes.sync);
 app.post('/check', routes.check);
+app.post('/apply', routes.apply);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

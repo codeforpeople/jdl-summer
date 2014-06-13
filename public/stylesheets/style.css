@@ -511,7 +511,8 @@ form.contact-form .input-group .form-control {
 	height: 500px;
 }
 
-form.apply-form input {
+form.apply-form input,
+form.apply-form select {
 	border-radius: 6px !important;
 }
 

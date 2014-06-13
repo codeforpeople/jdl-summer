@@ -1,0 +1,48 @@
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/Roboto.woff');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/RobotoLight.woff');
+	font-weight: 300;
+}
+
+body {
+	margin: 0px;
+	/*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+	height: 100%;
+}
+
+a {
+	color: #00B7FF;
+}
+
+form * {
+	font-family: "Roboto";
+}
+
+form.apply-form input,
+form.apply-form select {
+	border-radius: 6px !important;
+}
+
+form.apply-form .input-group {
+	width: 100% !important;
+}
+
+iframe {
+	border-radius: 3px;
+}
+
+#project-details-modal .modal-content, .styled-modal {
+	font-family: 'Roboto', sans-serif;
+	border-radius: 3px;
+}
+
+#project-details-modal h4.modal-title, .styled-modal h4.modal-title {
+	font-size: 40px;
+	font-weight: 300;
+}

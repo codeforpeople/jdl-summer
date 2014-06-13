@@ -127,48 +127,22 @@ define(function () {
 			var id = $(this).parents('.project').attr('id');
 			loginWithFacebook(function () {
 				$('#auth-modal').text('');
+				$('.btn-send-application').hide();
 
 				var iframe = document.createElement('iframe');
 				iframe.classList.add('apply-frame');
 				iframe.setAttribute('seamless', '');
-				iframe.setAttribute('src', '/auth');
+				iframe.setAttribute('src', '/auth?id=' + id);
 
 				document.querySelector('#auth-modal').appendChild(iframe);
 				$('#project-apply-modal').modal('show');
-
-				// checkApplicationStatus(id, function (result) {
-				// 	console.log(result);
-				// 	if (result.status === 0) {
-				// 		// we need authentification
-				// 		var w = window.open('/auth/facebook');
-				// 		var interval = window.setInterval(function() {
-				// 	        try {
-				// 	            if (w == null || w.closed) {
-				// 	                window.clearInterval(interval);
-				// 	                checkApplicationStatus(id, function (result) {
-				// 	                	if (result.status === 1) {
-				// 	                		if (result.duplicate === 0)
-				// 	                			registerProjectWithUser(id);
-				// 	                		else {
-				// 	                			// duplicate
-				// 	                		}
-				// 	                	}
-				// 	                });
-				// 	            }
-				// 	        }
-				// 	        catch (e) {
-				// 	        }
-				// 	    }, 1000);
-
-				// 	} else {
-				// 		if (result.duplicate === 0)
-				// 			registerProjectWithUser(id);
-				// 		else {
-				// 			// duplicate
-				// 		}
-				// 	}
-				// });
 			
+				checkApplicationStatus(id, function (res) {
+					if (res.status === 1) {
+						$('.btn-send-application').show();
+					}
+				});
+
 			});
 			
 		};
@@ -178,6 +152,19 @@ define(function () {
 			window.setTimeout(function () {
 				applyToProject(e)
 			}, 350);	
+		};
+
+		var sendApplication = function (e) {
+			var iframe = document.querySelector('#auth-modal iframe');
+			var iframe_doc = (iframe.contentWindow || iframe.contentDocument);
+			if (iframe_doc.document) {
+				var doc = iframe_doc.document;
+
+				var appForm = doc.querySelector('form');
+				if (appForm) appForm.submit()
+			}
+
+			$('.btn-send-application').hide();
 		};
 
 		var init = function() {
@@ -195,6 +182,7 @@ define(function () {
 			$(document).on('click', '.btn-project-details', loadProjectDetails);
 			$(document).on('click', '.btn-project-apply', applyToProject);
 			$(document).on('click', '.btn-apply2', applyToProject2);
+			$(document).on('click', '.btn-send-application', sendApplication);
 			$(document).on('scroll', document, ajustNavStyle);
 		}
 

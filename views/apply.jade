@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Asap:400,700', type='text/css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.styled-modal
+			.modal-header
+				h4.modal-title #{result.title}
+			.modal-body
+				p #{result.status}
+		script(src='/js/jquery.js')
+		script(src='/js/bootstrap.js')
