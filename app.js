@@ -37,7 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public').join(__dirname, 'legal')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 passport.serializeUser(function(user, done) {
 	done(null, user);
