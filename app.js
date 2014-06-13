@@ -8,10 +8,18 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var passport = require('passport');
+var FacebookStrategy = require('passport-facebook').Strategy;
 
 var app = express();
 
+var FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID.toString();
+var FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET.toString();
+var FACEBOOK_CALLBACK = 'http://localhost:3000/auth/facebook/callback';
+
 routes.sync = require('./routes/sync');
+routes.check = require('./routes/check');
+routes.auth = require('./routes/auth');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -19,11 +27,37 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.cookieParser());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(express.session({ secret: 'keyboard cat' }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public').join(__dirname, 'legal')));
+
+passport.serializeUser(function(user, done) {
+	done(null, user);
+});
+
+passport.deserializeUser(function(obj, done) {
+	done(null, obj);
+});
+
+passport.use(new FacebookStrategy({
+		clientID: FACEBOOK_APP_ID,
+		clientSecret: FACEBOOK_APP_SECRET,
+		callbackURL: FACEBOOK_CALLBACK,
+	},
+	function (accessToken, refreshToken, profile, done) {
+		process.nextTick(function() {
+			return done(null, profile);
+		});
+	}
+));
 
 // development only
 if ('development' == app.get('env')) {
@@ -32,8 +66,15 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'public_profile', 'user_education_history', 'user_birthday'] }));
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { scope: ['email', 'public_profile', 'user_education_history', 'user_birthday'] }), function (req, res) {
+	if (req.session.passport.user) console.log(req.session.passport.user);
+	res.end('<script>window.close();</script>');
+});
+app.get('/auth', routes.auth);
 
 app.post('/sync', routes.sync);
+app.post('/check', routes.check);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

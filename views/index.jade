@@ -131,5 +131,12 @@ block content
 				.modal-body
 					p Project description
 				.modal-footer
-					button.btn.btn-success(type='button') Aplică
+					button.btn.btn-success.btn-apply2(type='button') Aplică
 					button.btn.btn-default(type='button', data-dismiss='modal') Înapoi
+
+	.modal.fade#project-apply-modal(tab-index='-1', role='dialog', aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				#auth-modal
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Închide

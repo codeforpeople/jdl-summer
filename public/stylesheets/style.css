@@ -12,7 +12,7 @@
 
 body {
 	margin: 0px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	/*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 	height: 100%;
 }
 
@@ -338,7 +338,7 @@ section .page .section-title.inverted:after {
 	margin: 10px auto;
 }
 
-input.form-control:focus, textarea.form-control:focus {
+.contact-from input.form-control:focus, .contact-form textarea.form-control:focus {
 	outline: 0;
 	border-color: #ccc;
 	box-shadow: none !important;
@@ -349,25 +349,25 @@ form.contact-form {
 	width: 100%;
 }
 
-form .input-group {
+form.contact-form .input-group {
 	width: 50%;
 	box-sizing: border-box;
 	padding: 10px;
 	float: left;
 }
 
-form .input-group-addon {
+form.contact-form .input-group-addon {
 	width: 50px;
 	border-right: none;
 	background: #fff;
 }
 
-form .input-group-addon > .glyphicon{
+form.contact-form .input-group-addon > .glyphicon{
 	color: #aaa;
 	font-family: 'Glyphicons Halflings';
 }
 
-form .input-group .form-control {
+form.contact-form .input-group .form-control {
 	width: 100%;
 	padding-left: 0px;
 	border-left: none;
@@ -468,17 +468,18 @@ form .input-group .form-control {
 	-webkit-transition-duration: .1s;
 }
 
-#project-details-modal .modal-dialog{
+#project-details-modal .modal-dialog {
 	width: 90%;
 }
 
-#project-details-modal .modal-content {
+#project-details-modal .modal-content, .styled-modal {
 	font-family: 'Roboto', sans-serif;
 	border-radius: 3px;
 }
 
-#project-details-modal h4.modal-title {
+#project-details-modal h4.modal-title, .styled-modal h4.modal-title {
 	font-size: 40px;
+	font-weight: 300;
 }
 
 #project-details-modal .mentor-name:before {
@@ -502,4 +503,22 @@ form .input-group .form-control {
 
 #project-details-modal .skill-list span:last-child:after {
 	content: "";
+}
+
+#auth-modal, .apply-frame {
+	border: none;
+	width: 100%;
+	height: 500px;
+}
+
+form.apply-form input {
+	border-radius: 6px !important;
+}
+
+form.apply-form .input-group {
+	width: 100% !important;
+}
+
+iframe {
+	border-radius: 3px;
 }

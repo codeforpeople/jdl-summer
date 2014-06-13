@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Asap:400,700', type='text/css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.styled-modal
+			- if (typeof user === 'undefined')
+				.modal-header
+					h4.modal-title Ne pare rău
+				.modal-body
+					p Logarea cu Facebook nu a reușit. Acest pas este important pentru validarea aplicației și pentru automatizarea procesului.
+			-else
+				.modal-header
+					h4.modal-title Formular pentru aplicare
+				.modal-body
+					form.apply-form(action='/apply', method='post')
+						.input-group
+							label(for='lastName') Nume
+							input.form-control(type='text', name='lastName', id='lastName', value='#{user.name.familyName}', placeholder='Numele tău...')
+						.input-group
+							label(for='firstName') Prenume
+							input.form-control(type='text', name='firstName', id='firstName', value='#{user.name.givenName}', placeholder='Prenumele tău...')
+						.input-group
+							label(for='firstName') E-mail
+							input.form-control(type='email', name='email', id='email', value='#{user.emails[0].value}', placeholder='Adresa ta de e-mail...')
+						.input-group
+							label(for='firstName') Liceu
+							input.form-control(type='text', name='highschool', id='highschool', value='#{user.name.givenName}', placeholder='Liceul tău...')
+						.input-group
+							label(for='firstName') Clasa
+							select.form-control(name='firstName', id='firstName', value='#{user.name.givenName}', placeholder='Clasa în care ai fost înscris în anul școlar 2013-2014...')
+								option(value='9') 9
+								option(value='10') 10
+								option(value='11') 11
+								option(value='12') 12
+			
+		script(src='/js/jquery.js')
+		script(src='/js/bootstrap.js')

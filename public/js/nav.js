@@ -77,6 +77,109 @@ define(function () {
 			});
 		};
 
+		var checkApplicationStatus = function (id, cb) {
+			$.ajax({
+				type: 'post',
+				url: '/check',
+				data: {id: id},
+				dataType: 'json',
+				success: function (res) {
+					cb(res);
+				},
+				error: function (a,b,c) {
+					cb(null);
+					window.alert(c);
+				}
+			});
+		};
+
+		var registerProjectWithUser = function (id) {
+			$.ajax({
+				type: 'post',
+				url: '/check',
+				data: {id: id},
+				dataType: 'json',
+				success: function (res) {
+					cb(res);
+				},
+				error: function (a,b,c) {
+					cb(null);
+					window.alert(c);
+				}
+			});
+		};
+
+		var loginWithFacebook = function (cb) {
+			var w = window.open('/auth/facebook');
+			var interval = window.setInterval(function() {
+		        try {
+		            if (w == null || w.closed) {
+		                window.clearInterval(interval);
+		                cb();
+		            }
+		        }
+		        catch (e) {
+		        }
+		    }, 1000);
+		};
+
+		var applyToProject = function (e) {
+			var id = $(this).parents('.project').attr('id');
+			loginWithFacebook(function () {
+				$('#auth-modal').text('');
+
+				var iframe = document.createElement('iframe');
+				iframe.classList.add('apply-frame');
+				iframe.setAttribute('seamless', '');
+				iframe.setAttribute('src', '/auth');
+
+				document.querySelector('#auth-modal').appendChild(iframe);
+				$('#project-apply-modal').modal('show');
+
+				// checkApplicationStatus(id, function (result) {
+				// 	console.log(result);
+				// 	if (result.status === 0) {
+				// 		// we need authentification
+				// 		var w = window.open('/auth/facebook');
+				// 		var interval = window.setInterval(function() {
+				// 	        try {
+				// 	            if (w == null || w.closed) {
+				// 	                window.clearInterval(interval);
+				// 	                checkApplicationStatus(id, function (result) {
+				// 	                	if (result.status === 1) {
+				// 	                		if (result.duplicate === 0)
+				// 	                			registerProjectWithUser(id);
+				// 	                		else {
+				// 	                			// duplicate
+				// 	                		}
+				// 	                	}
+				// 	                });
+				// 	            }
+				// 	        }
+				// 	        catch (e) {
+				// 	        }
+				// 	    }, 1000);
+
+				// 	} else {
+				// 		if (result.duplicate === 0)
+				// 			registerProjectWithUser(id);
+				// 		else {
+				// 			// duplicate
+				// 		}
+				// 	}
+				// });
+			
+			});
+			
+		};
+
+		var applyToProject2 = function (e) {
+			$('#project-details-modal').modal('hide');
+			window.setTimeout(function () {
+				applyToProject(e)
+			}, 350);	
+		};
+
 		var init = function() {
 
 			ajustNavStyle();
@@ -90,6 +193,8 @@ define(function () {
 			});
 
 			$(document).on('click', '.btn-project-details', loadProjectDetails);
+			$(document).on('click', '.btn-project-apply', applyToProject);
+			$(document).on('click', '.btn-apply2', applyToProject2);
 			$(document).on('scroll', document, ajustNavStyle);
 		}
 
