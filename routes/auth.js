@@ -25,7 +25,7 @@ var auth = function (req, res) {
 
 		status = -2;
 
-		projects = JSON.parse(fs.readFileSync('./data/projects.json'));
+		projects = JSON.parse(fs.readFileSync('../data/projects.json'));
 		for (var i = projects.length - 1; i >= 0; i--) {
 			if (projects[i].id === req.query.id) {
 				user.project.name = projects[i].name;

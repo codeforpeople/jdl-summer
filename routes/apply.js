@@ -24,7 +24,7 @@ var apply = function (req, res) {
 
 				var project = null;
 
-				var projects = JSON.parse(fs.readFileSync('./data/projects.json'));
+				var projects = JSON.parse(fs.readFileSync('../data/projects.json'));
 				for (var i = projects.length - 1; i >= 0; i--) {
 					if (projects[i].id === appData.pid) {
 						project = projects[i];
