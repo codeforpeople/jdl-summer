@@ -531,3 +531,15 @@ iframe {
 .large {
 	font-size: 20px;
 }
+
+.table-image {
+	width: 100%;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
