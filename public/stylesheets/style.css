@@ -223,6 +223,7 @@ section .page .section-title.inverted:after {
 
 .process-step-image {
 	max-width: 150px;
+	opacity: .95;
 }
 
 .process-step-caption {
@@ -572,5 +573,5 @@ iframe {
 
 .table-image {
 	max-width: 200px;
-	opacity: .7;
+	opacity: .8;
 }
