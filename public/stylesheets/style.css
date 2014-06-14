@@ -523,3 +523,11 @@ form.apply-form .input-group {
 iframe {
 	border-radius: 3px;
 }
+
+.page-line {
+	border-color: #ccc;
+}
+
+.large {
+	font-size: 20px;
+}
