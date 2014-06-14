@@ -15,13 +15,14 @@ var auth = function (req, res) {
 		user.highschool = '';
 		user.project = {};
 
-		for (var i = req.session.passport.user['_json'].education.length - 1; i >= 0; i--) {
-			var x = req.session.passport.user['_json'].education[i];
-			if (x.type === 'High School') {
-				user.highschool = x.school.name;
-				break;
+		if (typeof req.session.passport.user['_json'].education !== 'undefined')
+			for (var i = req.session.passport.user['_json'].education.length - 1; i >= 0; i--) {
+				var x = req.session.passport.user['_json'].education[i];
+				if (x.type === 'High School') {
+					user.highschool = x.school.name;
+					break;
+				}
 			}
-		};
 
 		status = -2;
 
