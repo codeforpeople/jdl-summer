@@ -538,8 +538,38 @@ iframe {
 
 .align-left {
 	text-align: left;
+	padding-right: 10%;
 }
 
 .align-right {
 	text-align: right;
+	padding-left: 10%;
+}
+
+.large-text {
+	font-size: 25px;
+}
+
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+    clear: both;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+
+.col-middle {
+	vertical-align: middle;
+}
+
+.table-image {
+	max-width: 200px;
 }
