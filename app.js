@@ -15,7 +15,7 @@ var app = express();
 
 var FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID.toString();
 var FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET.toString();
-var FACEBOOK_CALLBACK = 'http://localhost:3000/auth/facebook/callback';
+var FACEBOOK_CALLBACK = 'http://jdll.co.vu/auth/facebook/callback';
 
 routes.sync = require('./routes/sync');
 routes.check = require('./routes/check');
