@@ -58,6 +58,7 @@ define(function () {
 
 			$('#project-details-modal .modal-title').text('Loading...');
 			$('#project-details-modal .modal-body').text('Loading...');
+			$('#project-details-modal').removeAttr('for');
 			
 			$.ajax({
 				type: 'post',
@@ -68,6 +69,7 @@ define(function () {
 					console.log(res);
 					if (res.status === 0) {
 						$('#project-details-modal .modal-title').text(res.data.name);
+						$('#project-details-modal').attr('for', res.data.id);
 						createDescription(res.data.longDescription, res.data.mentor, res.data.skillsNeeded);
 					}
 				},
@@ -123,8 +125,11 @@ define(function () {
 		    }, 1000);
 		};
 
-		var applyToProject = function (e) {
-			var id = $(this).parents('.project').attr('id');
+		var applyToProject = function (id) {
+
+			if (id === null || typeof id === 'undefined')
+				id = $(this).parents('.project').attr('id');
+			
 			loginWithFacebook(function () {
 				$('#auth-modal').text('');
 				$('.btn-send-application').hide();
@@ -150,6 +155,7 @@ define(function () {
 		var applyToProject2 = function (e) {
 			$('#project-details-modal').modal('hide');
 			window.setTimeout(function () {
+				var id = $('#project-details-modal').attr('for');
 				applyToProject(e)
 			}, 350);	
 		};
