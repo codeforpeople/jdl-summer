@@ -22,6 +22,7 @@ routes.check = require('./routes/check');
 routes.auth = require('./routes/auth');
 routes.apply = require('./routes/apply');
 routes.contact = require('./routes/contact');
+routes.update = require('./routes/update');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -79,6 +80,7 @@ app.post('/sync', routes.sync);
 app.post('/check', routes.check);
 app.post('/apply', routes.apply);
 app.post('/contact', routes.contact);
+app.post('/g/live/update', routes.update);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
