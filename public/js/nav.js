@@ -219,6 +219,7 @@ define(function () {
 						$('#contact-modal .modal-content').html(res);
 						$('#contact-modal').modal('show');
 						$('.btn-send-message').text('Trimite');
+						$('.contact-form input, .contact-form textarea').val('');
 						$('.contact-form fieldset').removeAttr('disabled');
 					},
 					error: function (a,b,c) {
