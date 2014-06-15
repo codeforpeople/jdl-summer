@@ -557,6 +557,7 @@ iframe {
 
 .large {
 	font-size: 20px;
+	line-height: 28px;
 }
 
 .table-image {
@@ -575,6 +576,7 @@ iframe {
 
 .large-text {
 	font-size: 25px;
+	line-height: 35px;
 }
 
 .container-xs-height {
