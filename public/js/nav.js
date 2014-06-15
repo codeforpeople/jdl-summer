@@ -125,7 +125,7 @@ define(function () {
 		    }, 1000);
 		};
 
-		var applyToProject = function (id) {
+		var applyToProject = function (e, id) {
 
 			if (id === null || typeof id === 'undefined')
 				id = $(this).parents('.project').attr('id');
@@ -156,7 +156,7 @@ define(function () {
 			$('#project-details-modal').modal('hide');
 			window.setTimeout(function () {
 				var id = $('#project-details-modal').attr('for');
-				applyToProject(e)
+				applyToProject(e, id);
 			}, 350);	
 		};
 
