@@ -106,18 +106,19 @@ block content
 			h1.section-title.inverted Suntem prietenoși și sociabili
 			h3.section-subtitle.inverted.small.
 				Ne place să stăm de vorbă. Întrebări, sugestii, reclamații, sau un simplu salut, nu ezita să ne scrii.
-			form.contact-form.form-inline
-				.input-group
-					snap.input-group-addon: span.glyphicon.glyphicon-user
-					input.form-control.input-lg(type='text', placeholder='Numele tau...')
-				.input-group
-					span.input-group-addon: span.glyphicon.glyphicon-envelope
-					input.form-control.input-lg(type='text', placeholder='Adresa de email...')
-				.input-group.full-width
-					span.input-group-addon.pull-top: span.glyphicon.glyphicon-comment
-					textarea.form-control.input-lg(placeholder='Mesajul tau', rows='5')
-				.input-group.full-width.centre
-					button.btn.btn-lg.btn-send-message Trimite
+			form(method='post').contact-form.form-inline
+				fieldset
+					.input-group
+						snap.input-group-addon: span.glyphicon.glyphicon-user
+						input.form-control.input-lg(type='text', name='name', id='name', placeholder='Numele tau...')
+					.input-group
+						span.input-group-addon: span.glyphicon.glyphicon-envelope
+						input.form-control.input-lg(type='email', name='email', id='email', placeholder='Adresa de email...')
+					.input-group.full-width
+						span.input-group-addon.pull-top: span.glyphicon.glyphicon-comment
+						textarea.form-control.input-lg(name='content', id='content', placeholder='Mesajul tau', rows='5')
+					.input-group.full-width.centre
+						button.btn.btn-lg.btn-send-message Trimite
 			p.footer.inverted.centre
 				.footer-info
 					.row.inverted
@@ -157,3 +158,7 @@ block content
 				.modal-footer
 					button.btn.btn-success.btn-send-application(type='button') Trimite
 					button.btn.btn-default(type='button', data-dismiss='modal') Închide
+
+	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
+		.modal-dialog
+			.modal-content

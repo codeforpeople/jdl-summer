@@ -339,10 +339,36 @@ section .page .section-title.inverted:after {
 	margin: 10px auto;
 }
 
-.contact-from input.form-control:focus, .contact-form textarea.form-control:focus {
+form.contact-form textarea.form-control:focus, form.contact-from input.form-control:focus {
 	outline: 0;
 	border-color: #ccc;
 	box-shadow: none !important;
+	/*border: none !important;*/
+	-webkit-box-shodow: none !important;
+}
+
+.contact-form .form-control:focus {
+	outline: 0;
+	border-color: #ccc;
+	box-shadow: none !important;
+	/*border: none !important;*/
+	-webkit-box-shodow: none !important;
+}
+
+form.contact-form .has-error textarea.form-control:focus, form.contact-from .has-error input.form-control:focus {
+	outline: 0;
+	border-color: #a94442;
+	box-shadow: none !important;
+	/*border: none !important;*/
+	-webkit-box-shodow: none !important;
+}
+
+.contact-form .has-error .form-control:focus {
+	outline: 0;
+	border-color: #a94442;
+	box-shadow: none !important;
+	/*border: none !important;*/
+	-webkit-box-shodow: none !important;
 }
 
 form.contact-form {
@@ -473,7 +499,7 @@ form.contact-form .input-group .form-control {
 	width: 90%;
 }
 
-#project-details-modal .modal-content, .styled-modal {
+.modal-content, .styled-modal {
 	font-family: 'Roboto', sans-serif;
 	border-radius: 3px;
 }
