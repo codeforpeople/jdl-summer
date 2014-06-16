@@ -7,7 +7,7 @@ var fs = require('fs');
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
-var http = require('https');
+var http = require('http');
 var path = require('path');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
@@ -83,11 +83,6 @@ app.post('/apply', routes.apply);
 app.post('/contact', routes.contact);
 app.post('/g/live/update', routes.update);
 
-var options = {
-	key: fs.readFileSync('./server.pem'),
-	cert: fs.readFileSync('./certificate.pem')
-};
-
-http.createServer(options, app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
