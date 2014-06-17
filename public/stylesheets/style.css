@@ -253,7 +253,7 @@ section .page .section-title.inverted:after {
 .project-box {
 	margin: 0px auto;
 	padding: 0px;
-	max-width: 400px;
+	max-width: 500px;
 }
 
 .project-box {
@@ -280,7 +280,7 @@ section .page .section-title.inverted:after {
 
 .project-cover {
 	width: 100%;
-	max-height: 400px;
+	max-height: 500px;
 	overflow: hidden;
 }
 
