@@ -48,7 +48,12 @@ section#cover {
 	width: 100%;
 	background-image: url('../images/bk.jpg');
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 section#blog {
