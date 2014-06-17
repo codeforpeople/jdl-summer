@@ -4,6 +4,7 @@
  */
 
 var fs = require('fs');
+var favicon = require('serve-favicon');
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
@@ -29,7 +30,7 @@ routes.update = require('./routes/update');
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.use(express.favicon());
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(express.logger('dev'));
 app.use(express.cookieParser());
 app.use(express.bodyParser());
