@@ -151,7 +151,8 @@ nav.navigation-bar ul.nav li .navigation-icon {
 .page {
 	margin: 0 auto;
 	max-width: 1024px;
-	padding: 50px 0;
+	padding: 50px 50px;
+	box-sizing: content-box;
 }
 
 .page * {
@@ -250,9 +251,9 @@ section .page .section-title.inverted:after {
 }
 
 .project-box {
-	margin: 0px;
+	margin: 0px auto;
 	padding: 0px;
-	/*margin-bottom: 10px;*/
+	max-width: 400px;
 }
 
 .project-box {
@@ -279,6 +280,8 @@ section .page .section-title.inverted:after {
 
 .project-cover {
 	width: 100%;
+	max-height: 400px;
+	overflow: hidden;
 }
 
 .tile-cover {
