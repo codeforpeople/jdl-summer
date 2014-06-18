@@ -87,7 +87,7 @@ var apply = function (req, res) {
 										from: 'contact@jdl.ro',
 										to: project.mentor.email,
 										subject: 'Someone applied to one of your projects',
-										html: _jade.compile(data, {filename: path})(appData);
+										html: _jade.compile(data, {filename: path})(appData)
 									});
 									
 								});
