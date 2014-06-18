@@ -76,11 +76,12 @@ var apply = function (req, res) {
 									}
 								});
 
-								var path = 'views/templates/mentor_mail.jade';
-								console.log('da');
+								var path = process.cwd() + '/views/templates/mentor_mail.jade';
 								var mentorTemplate = fs.readFile(path, 'utf8', function (err, data) {
 
 									if (err) console.log(err);
+
+									console.log('async aici');
 
 									// send email to mentor
 									smtpTransport.sendMail({
@@ -102,6 +103,8 @@ var apply = function (req, res) {
 									});
 									
 								});
+
+								console.log('sync aici')
 
 								result.title = 'Felicitări';
 								result.status = 'Ai aplicat cu success la proiect! Vei primi un e-mail de confirmare în curând.'
