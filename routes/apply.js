@@ -76,7 +76,6 @@ var apply = function (req, res) {
 									}
 								});
 
-								console.log('merge');
 								var mentorTemplate = fs.readFileSync('../views/templates/mentor_mail.jade');
 
 								// // send email to mentor
@@ -102,6 +101,7 @@ var apply = function (req, res) {
 								result.status = 'A apărut o eroare internă! Te rugăm să reîncerci.';
 								result.code = -3;
 							}
+							console.log('merge');
 							res.render('apply', { result: result });
 						}
 					);
