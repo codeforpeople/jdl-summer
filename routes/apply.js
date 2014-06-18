@@ -76,7 +76,7 @@ var apply = function (req, res) {
 									}
 								});
 
-								var mentorTemplate = fs.readFile('../views/templates/mentor_mail.jade', function (err, data) {
+								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', function (err, data) {
 
 									if (err) console.log(err);
 									console.log(data);
