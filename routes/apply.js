@@ -76,7 +76,8 @@ var apply = function (req, res) {
 									}
 								});
 
-								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', function (err, data) {
+								var path = process.cwd() + '/views/templates/mentor_mail.jade';
+								var mentorTemplate = fs.readFile(path, 'utf8', function (err, data) {
 
 									if (err) console.log(err);
 									console.log(data);
@@ -86,7 +87,7 @@ var apply = function (req, res) {
 										from: 'contact@jdl.ro',
 										to: project.mentor.email,
 										subject: 'Someone applied to one of your projects',
-										html: _jade.compile(data)(appData)
+										html: _jade.compile(data, {filename: path})(appData);
 									});
 									
 								});
