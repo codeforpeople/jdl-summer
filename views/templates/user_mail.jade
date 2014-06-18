@@ -1,0 +1,39 @@
+h1 Yuhuu!
+p Felicitări! Ai aplicat la proiectul "#{project.name}" propus de #{project.mentor.name}. Cum probabil nu ești singurul care s-a înscris iar locurile sunt limitate, încearcă să te faci remarcat de către mentor. Contactează-l cât mai repede și convinge-l să te ia în echipă.
+
+p În următoarele săptămâni vei primi un email prin care mentorul te va anunța decizia lui.
+br
+h2 Detalii
+table
+	tr
+		td Nume
+		td #{user.firstName}
+	tr
+		td Prenume
+		td #{user.lastName}
+	tr
+		td Liceu
+		td #{user.highschool}
+	tr
+		td E-mail
+		td #{user.email}
+	tr
+		td Clasa
+		td #{user.grade}
+	tr
+		td Proiect
+		td #{user.project}
+	tr
+		td Mentor
+		td #{mentor.name}
+	tr
+		td Contact mentor
+		td #{mentor.email}
+br
+br
+p Pentru orice nelămurire sau întrebare, ne poți contacta la 
+	a(target='_blank', href='mailto:contact@jdl.ro') contact@jdl.ro
+	|  , pe 
+	a(target='_blank', href='http://www.facebook.com/JuniorDevelopmentLabs') pagina oficială 
+	|  de Facebook sau prin mentori.
+p Și nu uita: Sharing is caring! ;)
