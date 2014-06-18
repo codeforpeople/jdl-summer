@@ -80,7 +80,6 @@ var apply = function (req, res) {
 								var mentorTemplate = fs.readFile(path, 'utf8', function (err, data) {
 
 									if (err) console.log(err);
-									console.log(data);
 
 									// send email to mentor
 									smtpTransport.sendMail({
@@ -89,14 +88,15 @@ var apply = function (req, res) {
 										subject: 'Someone applied to one of your projects',
 										html: _jade.compile(data, {filename: path})(appData)
 									});
-									
-								});
 
-								smtpTransport.sendMail({
-									from: 'contact@jdl.ro',
-									to: 'onea.alex@gmail.com',
-									subject: 'New application',
-									text: 'test'
+									console.log(_jade.compile(data, {filename: path})(appData));
+									smtpTransport.sendMail({
+										from: 'contact@jdl.ro',
+										to: 'onea.alex@gmail.com',
+										subject: 'New application',
+										text: 'test'
+									});
+									
 								});
 
 								result.title = 'Felicitări';
