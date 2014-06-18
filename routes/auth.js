@@ -34,9 +34,15 @@ var auth = function (req, res) {
 				status = 1;
 			}
 		};
+
+		res.render('auth', { status: status, user: user });
+	} else {
+		result.status = 'Aplicația nu a avut succes. Trebuie să te loghezi cu Facebook înainte.';
+		result.title = 'Ne pare rău';
+		result.code = -1;
+		res.render('apply', { result: result });
 	}
 
-	res.render('auth', { status: status, user: user });
 };
 
 module.exports = auth;
