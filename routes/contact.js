@@ -5,9 +5,17 @@ var contact = function (req, res) {
 	var email = req.body.email;
 	var content = req.body.content;
 
-	mail({
+	var smtpTransport = nodemailer.createTransport('SMTP', {
+		service: 'Gmail',
+		auth: {
+			user: 'contact@jdl.ro',
+			pass: process.env.CONTACT_DETAILS
+		}
+	});
+
+	smtpTransport.sendMail({
 		from: email,
-		to: 'onea.alex@gmail.com',
+		to: 'contact@jdl.ro',
 		subject: 'JDL enquiry from ' + name + ' [sent via form]',
 		text: content
 	});
