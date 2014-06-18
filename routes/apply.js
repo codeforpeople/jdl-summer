@@ -76,23 +76,22 @@ var apply = function (req, res) {
 									}
 								});
 
-								var mentorTemplate = fs.readFileSync('../views/templates/mentor_mail.jade');
-								console.log('merge');
+								var mentorTemplate = fs.readFileSync('views/templates/mentor_mail.jade', 'utf8');
 
-								// // send email to mentor
-								// smtpTransport.sendMail({
-								// 	from: 'contact@jdl.ro',
-								// 	to: project.mentor.email,
-								// 	subject: 'Someone applied to one of your projects',
-								// 	html: _jade.compile(mentorTemplate)(appData)
-								// });
+								// send email to mentor
+								smtpTransport.sendMail({
+									from: 'contact@jdl.ro',
+									to: project.mentor.email,
+									subject: 'Someone applied to one of your projects',
+									html: _jade.compile(mentorTemplate)(appData)
+								});
 
-								// smtpTransport.sendMail({
-								// 	from: 'contact@jdl.ro',
-								// 	to: 'onea.alex@gmail.com',
-								// 	subject: 'New application',
-								// 	text: 'test'
-								// });
+								smtpTransport.sendMail({
+									from: 'contact@jdl.ro',
+									to: 'onea.alex@gmail.com',
+									subject: 'New application',
+									text: 'test'
+								});
 
 								result.title = 'Felicitări';
 								result.status = 'Ai aplicat cu success la proiect! Vei primi un e-mail de confirmare în curând.'
