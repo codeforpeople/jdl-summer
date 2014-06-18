@@ -85,7 +85,7 @@ var apply = function (req, res) {
 									html: _jade.compile(mentorTemplate)(appData)
 								});
 
-								smptTransport.sendMail({
+								smtpTransport.sendMail({
 									from: 'contact@jdl.ro',
 									to: 'onea.alex@gmail.com',
 									subject: 'New application',
