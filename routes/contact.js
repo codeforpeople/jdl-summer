@@ -1,4 +1,4 @@
-var mail = require('nodemailer').mail;
+var nodemailer = require('nodemailer');
 
 var contact = function (req, res) {
 	var name = req.body.name;
