@@ -87,6 +87,9 @@ var apply = function (req, res) {
 										to: project.mentor.email,
 										subject: 'Someone applied to one of your projects',
 										html: _jade.compile(data, {filename: path})(appData)
+									}, function (err, response) {
+										if (err) console.log(err);
+										console.log(response);
 									});
 
 									console.log(_jade.compile(data, {filename: path})(appData));
