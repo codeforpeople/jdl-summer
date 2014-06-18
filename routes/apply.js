@@ -69,8 +69,10 @@ var apply = function (req, res) {
 								appData.project = project.name;
 
 
-								var path = process.cwd() + '/views/templates/mentor_mail.jade';
+								var mentorPath = process.cwd() + '/views/templates/mentor_mail.jade';
+								var adminPath = process.cwd() + '/views/templates/admin_mail.jade';
 								var mentorTemplate = fs.readFileSync(path, 'utf8');
+								var adminTemplate = fs.readFileSync(path, 'utf8');
 
 								var smtpTransport = nodemailer.createTransport('SMTP', {
 									service: 'Gmail',
@@ -85,17 +87,21 @@ var apply = function (req, res) {
 									from: 'Junior Development Labs <contact@jdl.ro>',
 									to: project.mentor.email,
 									subject: 'Someone applied to one of your projects',
-									html: _jade.compile(data, {filename: path})({user: appData})
+									html: _jade.compile(mentorTemplate, {filename: mentorPath})({user: appData})
 								}, function (err, response) {
 									if (err) console.log(err);
 									console.log(response);
 								});
 
+								// send email to admin
 								smtpTransport.sendMail({
-									from: 'contact@jdl.ro',
-									to: 'onea.alex@gmail.com',
-									subject: 'New application',
-									text: 'test'
+									from: 'Junior Development Labs <contact@jdl.ro>',
+									to: project.mentor.email,
+									subject: 'Someone applied to one of the projects',
+									html: _jade.compile(adminTemplate, {filename: adminPath})({user: appData})
+								}, function (err, response) {
+									if (err) console.log(err);
+									console.log(response);
 								});
 
 								result.title = 'Felicitări';
