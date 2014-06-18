@@ -76,16 +76,16 @@ var apply = function (req, res) {
 									}
 								});
 
-								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', 'utf8', function () {
+								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', 'utf8', function (data) {
 
-									console.log(mentorTemplate);
+									console.log(data);
 
 									// send email to mentor
 									smtpTransport.sendMail({
 										from: 'contact@jdl.ro',
 										to: project.mentor.email,
 										subject: 'Someone applied to one of your projects',
-										html: _jade.compile(mentorTemplate)(appData)
+										html: _jade.compile(data)(appData)
 									});
 									
 								});
