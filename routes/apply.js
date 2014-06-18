@@ -78,6 +78,8 @@ var apply = function (req, res) {
 
 								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', 'utf8', function () {
 
+									console.log(mentorTemplate);
+
 									// send email to mentor
 									smtpTransport.sendMail({
 										from: 'contact@jdl.ro',
