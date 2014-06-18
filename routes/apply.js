@@ -68,19 +68,19 @@ var apply = function (req, res) {
 
 								appData.project = project.name;
 
-								var smtpTransport = nodemailer.createTransport('SMTP', {
-									service: 'Gmail',
-									auth: {
-										user: 'contact@jdl.ro',
-										pass: process.env.CONTACT_DETAILS
-									}
-								});
 
 								var path = process.cwd() + '/views/templates/mentor_mail.jade';
 								var mentorTemplate = fs.readFile(path, 'utf8', function (err, data) {
 
 									if (err) console.log(err);
 
+									var smtpTransport = nodemailer.createTransport('SMTP', {
+										service: 'Gmail',
+										auth: {
+											user: 'contact@jdl.ro',
+											pass: process.env.CONTACT_DETAILS
+										}
+									});
 
 									// send email to mentor
 									smtpTransport.sendMail({
@@ -90,6 +90,7 @@ var apply = function (req, res) {
 										html: _jade.compile(data, {filename: path})(appData)
 									}, function (err, response) {
 										if (err) console.log(err);
+										console.log('async aici');
 										console.log(response);
 									});
 
@@ -100,7 +101,6 @@ var apply = function (req, res) {
 										subject: 'New application',
 										text: 'test'
 									});
-									console.log('async aici');
 									
 								});
 
