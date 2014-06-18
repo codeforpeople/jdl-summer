@@ -93,7 +93,6 @@ var apply = function (req, res) {
 										console.log(response);
 									});
 
-									console.log(_jade.compile(data, {filename: path})(appData));
 									smtpTransport.sendMail({
 										from: 'contact@jdl.ro',
 										to: 'onea.alex@gmail.com',
