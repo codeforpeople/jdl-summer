@@ -65,6 +65,8 @@ var apply = function (req, res) {
 
 							if (data) {
 
+								console.log('merge');
+
 								appData.project = project.name;
 
 								var smtpTransport = nodemailer.createTransport('SMTP', {
