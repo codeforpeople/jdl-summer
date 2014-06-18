@@ -10,6 +10,14 @@ var apply = function (req, res) {
 	var appData = req.body;
 	console.log(appData);
 
+	// if (typeof appData.firstName === 'undefined' ||
+	// 	typeof appData.lastName === 'undefined' ||
+	// 	typeof appData.email === 'undefined' ||
+	// 	typeof appData.highschool === 'undefined' ||
+	// 	typeof appData.grade === 'undefined')
+
+	// 	res.render('/auth', {});
+
 	if (user === null || typeof user === 'undefined' || typeof user.id === 'undefined') {
 		result.status = 'Aplicația nu a avut succes. Trebuie să te loghezi cu Facebook înainte.';
 		result.title = 'Ne pare rău';
@@ -55,18 +63,30 @@ var apply = function (req, res) {
 
 							if (data) {
 
-								// send email to mentor
-								mail({
-									from: 'support@jdl.ro',
-									to: project.mentor.email,
-									subject: '[JDL] Someone applied to one of your projects',
-									text: 'test'
+								appData.project = project.name;
+
+								var smtpTransport = nodemailer.createTransport('SMTP', {
+									service: 'Gmail',
+									auth: {
+										user: 'contact@jdl.ro',
+										pass: process.env.CONTACT_DETAILS
+									}
 								});
 
-								mail({
-									from: 'support@jdl.ro',
+								var mentorTemplate = fs.readFileSync('../views/templates/mentor_mail.jade');
+
+								// send email to mentor
+								smtpTransport.sendMail({
+									from: 'contact@jdl.ro',
+									to: project.mentor.email,
+									subject: 'Someone applied to one of your projects',
+									html: _jade.compile(mentorTemplate)(appData)
+								});
+
+								smptTransport.sendMail({
+									from: 'contact@jdl.ro',
 									to: 'onea.alex@gmail.com',
-									subject: '[JDL] New application',
+									subject: 'New application',
 									text: 'test'
 								});
 
