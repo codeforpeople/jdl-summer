@@ -91,26 +91,6 @@ var apply = function (req, res) {
 									console.log(response);
 								});
 
-								var smtpTransport = nodemailer.createTransport('SMTP', {
-									service: 'Gmail',
-									auth: {
-										user: 'contact@jdl.ro',
-										pass: process.env.CONTACT_DETAILS
-									}
-								});
-
-								// send email to mentor
-								smtpTransport.sendMail({
-									from: 'contact@jdl.ro',
-									to: project.mentor.email,
-									subject: 'Someone applied to one of your projects',
-									html: _jade.compile(data, {filename: path})({user: appData})
-								}, function (err, response) {
-									if (err) console.log(err);
-									console.log(response);
-								});
-
-								console.log(_jade.compile(data, {filename: path})(appData));
 								smtpTransport.sendMail({
 									from: 'contact@jdl.ro',
 									to: 'onea.alex@gmail.com',
