@@ -37,6 +37,7 @@ var auth = function (req, res) {
 
 		res.render('auth', { status: status, user: user });
 	} else {
+		var result = {};
 		result.status = 'Aplicația nu a avut succes. Trebuie să te loghezi cu Facebook înainte.';
 		result.title = 'Ne pare rău';
 		result.code = -1;
