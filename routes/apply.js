@@ -1,6 +1,8 @@
 var manager = require('../lib/framework.js')();
 var fs = require('fs');
-var mail = require('nodemailer').mail;
+var nodemailer = require('nodemailer');
+var _jade = require('jade');
+
 
 var apply = function (req, res) {
 
