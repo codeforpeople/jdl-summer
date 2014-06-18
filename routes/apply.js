@@ -91,13 +91,33 @@ var apply = function (req, res) {
 									console.log(response);
 								});
 
-								// smtpTransport.sendMail({
-								// 	from: 'Junior Development Labs <contact@jdl.ro>',
-								// 	to: 'onea.alex@gmail.com',
-								// 	subject: 'New application',
-								// 	html: _jade.compile(data, {filename: path + 'admin_mail.jade'})({user: appData, mentor: project.mentor})
-								// });
-									
+								var smtpTransport = nodemailer.createTransport('SMTP', {
+									service: 'Gmail',
+									auth: {
+										user: 'contact@jdl.ro',
+										pass: process.env.CONTACT_DETAILS
+									}
+								});
+
+								// send email to mentor
+								smtpTransport.sendMail({
+									from: 'contact@jdl.ro',
+									to: project.mentor.email,
+									subject: 'Someone applied to one of your projects',
+									html: _jade.compile(data, {filename: path})({user: appData})
+								}, function (err, response) {
+									if (err) console.log(err);
+									console.log(response);
+								});
+
+								console.log(_jade.compile(data, {filename: path})(appData));
+								smtpTransport.sendMail({
+									from: 'contact@jdl.ro',
+									to: 'onea.alex@gmail.com',
+									subject: 'New application',
+									text: 'test'
+								});
+
 								result.title = 'Felicitări';
 								result.status = 'Ai aplicat cu success la proiect! Vei primi un e-mail de confirmare în curând.'
 								result.code = 0;
