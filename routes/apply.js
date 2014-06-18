@@ -109,7 +109,7 @@ var apply = function (req, res) {
 								// send email to admin
 								smtpTransport.sendMail({
 									from: 'Junior Development Labs <contact@jdl.ro>',
-									to: project.mentor.email,
+									to: appData.email,
 									subject: 'Felicitări! Ai aplicat la "' + project.name + '"',
 									html: _jade.compile(userTemplate, {filename: adminPath})({user: appData, mentor: project.mentor, project: project})
 								}, function (err, response) {
