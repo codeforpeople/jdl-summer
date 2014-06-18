@@ -87,10 +87,9 @@ var apply = function (req, res) {
 										from: 'contact@jdl.ro',
 										to: project.mentor.email,
 										subject: 'Someone applied to one of your projects',
-										html: _jade.compile(data, {filename: path})(appData)
+										html: _jade.compile(data, {filename: path})({user: appData})
 									}, function (err, response) {
 										if (err) console.log(err);
-										console.log('async aici');
 										console.log(response);
 									});
 
@@ -103,8 +102,6 @@ var apply = function (req, res) {
 									});
 									
 								});
-
-								console.log('sync aici')
 
 								result.title = 'Felicitări';
 								result.status = 'Ai aplicat cu success la proiect! Vei primi un e-mail de confirmare în curând.'
