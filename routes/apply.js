@@ -76,7 +76,8 @@ var apply = function (req, res) {
 									}
 								});
 
-								var path = process.cwd() + '/views/templates/mentor_mail.jade';
+								var path = 'views/templates/mentor_mail.jade';
+								console.log('da');
 								var mentorTemplate = fs.readFile(path, 'utf8', function (err, data) {
 
 									if (err) console.log(err);
