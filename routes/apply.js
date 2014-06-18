@@ -76,14 +76,16 @@ var apply = function (req, res) {
 									}
 								});
 
-								var mentorTemplate = fs.readFileSync('views/templates/mentor_mail.jade', 'utf8');
+								var mentorTemplate = fs.readFile('views/templates/mentor_mail.jade', 'utf8', function () {
 
-								// send email to mentor
-								smtpTransport.sendMail({
-									from: 'contact@jdl.ro',
-									to: project.mentor.email,
-									subject: 'Someone applied to one of your projects',
-									html: _jade.compile(mentorTemplate)(appData)
+									// send email to mentor
+									smtpTransport.sendMail({
+										from: 'contact@jdl.ro',
+										to: project.mentor.email,
+										subject: 'Someone applied to one of your projects',
+										html: _jade.compile(mentorTemplate)(appData)
+									});
+									
 								});
 
 								smtpTransport.sendMail({
