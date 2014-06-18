@@ -71,8 +71,8 @@ var apply = function (req, res) {
 
 								var mentorPath = process.cwd() + '/views/templates/mentor_mail.jade';
 								var adminPath = process.cwd() + '/views/templates/admin_mail.jade';
-								var mentorTemplate = fs.readFileSync(path, 'utf8');
-								var adminTemplate = fs.readFileSync(path, 'utf8');
+								var mentorTemplate = fs.readFileSync(mentorPath, 'utf8');
+								var adminTemplate = fs.readFileSync(adminPath, 'utf8');
 
 								var smtpTransport = nodemailer.createTransport('SMTP', {
 									service: 'Gmail',
