@@ -65,7 +65,6 @@ var apply = function (req, res) {
 
 							if (data) {
 
-								console.log('merge');
 
 								appData.project = project.name;
 
@@ -77,6 +76,7 @@ var apply = function (req, res) {
 									}
 								});
 
+								console.log('merge');
 								var mentorTemplate = fs.readFileSync('../views/templates/mentor_mail.jade');
 
 								// // send email to mentor
