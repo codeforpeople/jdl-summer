@@ -81,7 +81,6 @@ var apply = function (req, res) {
 
 									if (err) console.log(err);
 
-									console.log('async aici');
 
 									// send email to mentor
 									smtpTransport.sendMail({
@@ -101,6 +100,7 @@ var apply = function (req, res) {
 										subject: 'New application',
 										text: 'test'
 									});
+									console.log('async aici');
 									
 								});
 
