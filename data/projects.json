@@ -16,7 +16,7 @@
 	{
 		"id": "graphics",
 		"name": "Ancient pixels",
-		"shortDescription": "Joc grafic simplu sau lume grafică realizată în C/C++ cu ajutorul bibelotecii OpenGL",
+		"shortDescription": "Joc grafic simplu sau lume grafică realizată în C/C++ cu ajutorul bibleotecii OpenGL",
 		"longDescription": "Jocurile pe care le jucăm astăzi dispun de grafică și realism extraordinare. Totuși, aceste lucruri nu au fost mereu așa. Acest proiect își propune o călătorie în timp în lumea graficii pe calculator, precum și primii pași în materie de proiectarea și dezvoltarea jocurilor grafice",
 		"coverPhoto": "/images/projects/covers/ancient_pixels.jpg",
 		"mentor": {

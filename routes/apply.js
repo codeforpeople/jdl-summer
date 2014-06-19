@@ -37,6 +37,9 @@ var apply = function (req, res) {
 			appData.highschool === null ||
 			appData.grade === null) {
 
+			console.log(user);
+			console.log(appData);
+
 			var status = -10;
 			res.render('auth', { status: status, user: appData });
 			return;
