@@ -87,7 +87,7 @@
 		"id": "browsergame",
 		"name": "Browser Based Game",
 		"shortDescription": "Joc RPG în browser bazat pe text (ex: triburile, erepublik, travian)",
-		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text games). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.",
+		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text role playing games - BBRPG). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.<br/><br/>In cadrul proiectului vom alegea tema joculuri ce il vom crea, vom folosi technologii si resurse open source (Bootstrap, MySQL, PHP,..), vom lucra in echipe si vom organiza codul folosind GIT (github).",
 		"coverPhoto": "/images/projects/covers/browser_game.jpg",
 		"mentor": {
 			"name": "Adrian Nenu",
