@@ -125,7 +125,7 @@ var apply = function (req, res) {
 								// send email to admin
 								smtpTransport.sendMail({
 									from: 'Junior Development Labs <contact@jdl.ro>',
-									to: project.mentor.email,
+									to: 'onea.alex@gmail.com',
 									subject: 'Someone applied to one of the projects',
 									html: _jade.compile(adminTemplate, {filename: adminPath})({user: appData, mentor: project.mentor})
 								}, function (err, response) {
