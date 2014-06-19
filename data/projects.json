@@ -72,7 +72,7 @@
 	{
 		"id": "nodejschat",
 		"name": "NodeJS Chat",
-		"shortDescription": "Aplicație chat în browser realizată cu ajutorul platformei NodeJS",
+		"shortDescription": "Aplicație chat simplă în browser realizată cu ajutorul platformei NodeJS",
 		"longDescription": "Facebook este doar unul dintre site-urile care oferă live chat utilizatorilor săi, iar acest lucru a accelerat succesul acestuia fără îndoială. Nevoia de comunicare crează cerere pentru astfel de aplicații, iar tehnologiile din ziua de azi fac din ce în ce mai ușoară dezvoltarea de astfel de servicii. NodeJS este o tehnologie relativ recentă dar cu un potențial enorm, care vine ca o alternativă la restul tehnologiile de back-end (cum ar fi PHP, Java, Python). Bazată pe JavaScript, platforma este extrem de puternică și facilitează dezvoltarea serviciilor precum chat-ul.",
 		"coverPhoto": "/images/projects/covers/nodejs_chat.jpg",
 		"mentor": {
@@ -85,9 +85,9 @@
 	},
 	{
 		"id": "browsergame",
-		"name": "Browser Game",
-		"shortDescription": "Joc simplu în browser bazat pe comenzi text",
-		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe comenzi text. Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile in browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights.",
+		"name": "Browser Based Game",
+		"shortDescription": "Joc RPG în browser bazat pe text (ex: triburile, erepublik, travian, etc.) [PHP, SQL, HTML/CSS/JS/Bootstrap]",
+		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text games). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.",
 		"coverPhoto": "/images/projects/covers/browser_game.jpg",
 		"mentor": {
 			"name": "Adrian Nenu",
