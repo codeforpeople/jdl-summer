@@ -100,7 +100,7 @@
 	{
 		"id": "wordpress",
 		"name": "Wordpress Development",
-		"shortDescription": "Wordpress a evoluat de la o simpla platforma de blogging la un Content Management System complet",
+		"shortDescription": "Wordpress a evoluat de la o simpla platforma de blogging la Content Management System",
 		"longDescription": "Wordpress a evoluat rapid si este in continua dezvoltare, avand o popularitate extraordinara. In cadrul proiectului vom modifica un theme existent pentru platforma si vom crea plugin-uri (module ce adauga functionalitati platformei) de la zero. Technologiile folosite sunt PHP, SQL, HTML, CSS && Wordpress.",
 		"coverPhoto": "/images/projects/covers/wordpress.jpg",
 		"mentor": {
