@@ -43,9 +43,10 @@ var apply = function (req, res) {
 			appData.name = {};
 			appData.name.familyName = appData.lastName;
 			appData.name.givenName = appData.firstName;
+			var pname = appData.project;
 			appData.project = {};
 			appData.project.id = appData.pid;
-			appData.project.name = appData.project;
+			appData.project.name = pname;
 
 			var status = -10;
 			res.render('auth', { status: status, user: appData });
