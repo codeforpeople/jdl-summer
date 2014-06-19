@@ -16,7 +16,7 @@ var contact = function (req, res) {
 	smtpTransport.sendMail({
 		from: email,
 		to: 'contact@jdl.ro',
-		subject: 'JDL enquiry from ' + name + ' [sent via form]',
+		subject: 'JDL enquiry from ' + name + ' [' + email + '] [sent via form]',
 		text: content
 	});
 
