@@ -28,6 +28,7 @@ html
 							.input-group
 								label(for='project') Proiect
 								input.form-control(type='text', name='project', id='project', value='#{user.project.name}', disabled)
+								input.form-control(type='hidden', name='project', id='project', value='#{user.project.name}')
 							.input-group
 								label(for='lastName') Nume
 								input.form-control(type='text', name='lastName', id='lastName', value='#{user.name.familyName}', placeholder='Numele tău...')
