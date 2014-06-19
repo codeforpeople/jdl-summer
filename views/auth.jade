@@ -21,6 +21,9 @@ html
 					.modal-header
 						h4.modal-title Formular pentru aplicare
 					.modal-body
+						- if (status === -10)
+							.alert.alert-danger
+								p Te rugăm să completezi toate câmpurile.
 						form.apply-form(action='/apply', method='post')
 							.input-group
 								label(for='project') Proiect

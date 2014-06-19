@@ -12,12 +12,6 @@ var apply = function (req, res) {
 	var appData = req.body;
 	console.log(appData);
 
-	// if (typeof appData.firstName === 'undefined' ||
-	// 	typeof appData.lastName === 'undefined' ||
-	// 	typeof appData.email === 'undefined' ||
-	// 	typeof appData.highschool === 'undefined' ||
-	// 	typeof appData.grade === 'undefined')
-
 	// 	res.render('/auth', {});
 
 	if (user === null || typeof user === 'undefined' || typeof user.id === 'undefined') {
@@ -26,6 +20,28 @@ var apply = function (req, res) {
 		result.code = -1;
 		res.render('apply', { result: result });
 	} else {
+
+		if (typeof appData.firstName === 'undefined' ||
+			typeof appData.lastName === 'undefined' ||
+			typeof appData.email === 'undefined' ||
+			typeof appData.highschool === 'undefined' ||
+			typeof appData.grade === 'undefined' ||
+			appData.firstName === '' ||
+			appData.lastName === '' ||
+			appData.email === '' ||
+			appData.highschool === '' ||
+			appData.grade === '' ||
+			appData.firstName === null ||
+			appData.lastName === null ||
+			appData.email === null ||
+			appData.highschool === null ||
+			appData.grade === null) {
+
+			var status = -10;
+			res.render('auth', { status: status, user: appData });
+			return;
+		}
+
 		manager.checkApplication(appData.pid, user.id, function (err, data) {
 			if (err) console.log(err);
 			
