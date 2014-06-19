@@ -167,7 +167,24 @@ define(function () {
 				var doc = iframe_doc.document;
 
 				var appForm = doc.querySelector('form');
-				if (appForm) appForm.submit()
+
+				if (appForm) {
+
+					var fields = appForm.querySelectorAll('input');
+
+					var emptyField = false;
+
+					for (var i = fields.length - 1; i >= 0; i--) {
+						if ($(fields[i]).val() === '') {
+							emptyField = true;
+							$(fields[i]).parent().addClass('has-error');
+						} else {
+							$(fields[i]).parent().removeClass('has-error');
+						}
+					};
+
+					if (emptyField === false) appForm.submit()
+				}
 			}
 
 			$('.btn-send-application').hide();
