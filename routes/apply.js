@@ -21,37 +21,37 @@ var apply = function (req, res) {
 		res.render('apply', { result: result });
 	} else {
 
-		if (typeof appData.firstName === 'undefined' ||
-			typeof appData.lastName === 'undefined' ||
-			typeof appData.email === 'undefined' ||
-			typeof appData.highschool === 'undefined' ||
-			typeof appData.grade === 'undefined' ||
-			appData.firstName === '' ||
-			appData.lastName === '' ||
-			appData.email === '' ||
-			appData.highschool === '' ||
-			appData.grade === '' ||
-			appData.firstName === null ||
-			appData.lastName === null ||
-			appData.email === null ||
-			appData.highschool === null ||
-			appData.grade === null) {
+		// if (typeof appData.firstName === 'undefined' ||
+		// 	typeof appData.lastName === 'undefined' ||
+		// 	typeof appData.email === 'undefined' ||
+		// 	typeof appData.highschool === 'undefined' ||
+		// 	typeof appData.grade === 'undefined' ||
+		// 	appData.firstName === '' ||
+		// 	appData.lastName === '' ||
+		// 	appData.email === '' ||
+		// 	appData.highschool === '' ||
+		// 	appData.grade === '' ||
+		// 	appData.firstName === null ||
+		// 	appData.lastName === null ||
+		// 	appData.email === null ||
+		// 	appData.highschool === null ||
+		// 	appData.grade === null) {
 
-			console.log(user);
-			console.log(appData);
+		// 	console.log(user);
+		// 	console.log(appData);
 
-			appData.name = {};
-			appData.name.familyName = appData.lastName;
-			appData.name.givenName = appData.firstName;
-			var pname = appData.project;
-			appData.project = {};
-			appData.project.id = appData.pid;
-			appData.project.name = pname;
+		// 	appData.name = {};
+		// 	appData.name.familyName = appData.lastName;
+		// 	appData.name.givenName = appData.firstName;
+		// 	var pname = appData.project;
+		// 	appData.project = {};
+		// 	appData.project.id = appData.pid;
+		// 	appData.project.name = pname;
 
-			var status = -10;
-			res.render('auth', { status: status, user: appData });
-			return;
-		}
+		// 	var status = -10;
+		// 	res.render('auth', { status: status, user: appData });
+		// 	return;
+		// }
 
 		manager.checkApplication(appData.pid, user.id, function (err, data) {
 			if (err) console.log(err);
