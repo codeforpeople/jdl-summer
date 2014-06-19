@@ -183,11 +183,16 @@ define(function () {
 						}
 					};
 
-					if (emptyField === false) appForm.submit()
-				}
-			}
+					console.log(fields);
 
-			$('.btn-send-application').hide();
+					if (emptyField === false) {
+						appForm.submit()
+						$('.btn-send-application').hide();
+					}
+				}
+			} else {
+				$('.btn-send-application').hide();
+			}
 		};
 
 		var sendMessage = function (e) {
