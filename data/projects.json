@@ -87,7 +87,7 @@
 		"id": "browsergame",
 		"name": "Browser Based Game",
 		"shortDescription": "Joc RPG în browser bazat pe text (ex: triburile, erepublik, travian)",
-		"longDescription": "<br/><br/>Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text games). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.",
+		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text games). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.",
 		"coverPhoto": "/images/projects/covers/browser_game.jpg",
 		"mentor": {
 			"name": "Adrian Nenu",
@@ -95,6 +95,20 @@
 		},
 		"skillsNeeded": [
 			"pasiune pentru dezvoltarea de aplicații web", " întelegere de bază a structurii unei pagini HTML"
+		]
+	},
+	{
+		"id": "wordpress",
+		"name": "Wordpress Development",
+		"shortDescription": "Wordpress a evoluat de la o simpla platforma de blogging la un Content Management System complet",
+		"longDescription": "Wordpress a evoluat rapid si este in continua dezvoltare, avand o popularitate extraordinara. In cadrul proiectului vom modifica un theme existent pentru platforma si vom crea plugin-uri (module ce adauga functionalitati platformei) de la zero. Technologiile folosite sunt PHP, SQL, HTML, CSS && Wordpress.",
+		"coverPhoto": "/images/projects/covers/wordpress.jpg",
+		"mentor": {
+			"name": "Adrian Nenu",
+			"email": "adrian.nenu@gmail.com"
+		},
+		"skillsNeeded": [
+			"pasiune pentru dezvoltarea de aplicații web", "cunoștințe minime de HTML"
 		]
 	}
 ]
