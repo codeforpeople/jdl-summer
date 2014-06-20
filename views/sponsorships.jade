@@ -1,0 +1,61 @@
+extends layout
+
+block content
+	style.
+		html, body {
+			background-color: #eee;
+			padding: 20px 50px;
+		}
+
+		.page.sponsorships {
+			padding: 0px;
+			margin: 50px 0;
+		}
+
+		.panel-heading a {
+			text-decoration: none;
+			height:  100%;
+			width: 100%;
+		}
+
+		.panel-group .panel {
+			width: 100%;
+		}
+
+		.sponsorships a.btn.btn-lg {
+			width: 120px;
+		}
+	.header
+		h1 Junior Development Labs
+		h4 Pachete de sponsorizare
+	.page.sponsorships
+		.panel-group#accordion
+			.panel.panel-default
+				.panel-heading
+					a(data-toggle='collapse', data-parent='#accordion', href='#gold'): h4.panel-title GOLD - 500 RON
+				.panel-collapse.collapse.in#gold
+					.panel-body
+						ul
+							li Logo-ul sau sigla companiei pe site-ul evenimentului, la categoria sponsori, cu mențiunea Sponsor Gold
+							li Logo-ul sau sigla companiei pe toate materialele printate distribuite cu ocazia evenimentului, cu mențiunea Sponsor Gold
+							li Menționarea calității de Sponsor Gold în descrierea evenimentului de pe pagina oficială de Facebook
+							li Menționarea calității de Sponsor Gold în unele articole publicate de pagina oficiala de Facebook a evenimentului
+							li Logo-ul sau sigla companiei sub forma de watermark pe toate pozele de la eveniment, publicate pe pagina oficială de Facebook
+							li CD cu toate pozele de la eveniment
+							li Posibilitatea realizării din partea companiei a unei prezentări de 15 minute + 5 minute pentru întrebări
+							li Posibilitatea de expunere a produselor dupa caz
+							li Mulțumiri speciale aduse companiei în calitate de Sponsor Gold atât la festivitatea de deschidere, cât și la cea de închidere a evenimentului
+						a.btn.btn-success.btn-lg.centre(href='mailto:contact@jdl.ro?subject=GOLD-sponsorship') Aplică
+			.panel.panel-default
+				.panel-heading
+					a(data-toggle='collapse', data-parent='#accordion', href='#silver'): h4.panel-title SILVER - 250 RON
+				.panel-collapse.collapse#silver
+					.panel-body
+						ul
+							li Logo-ul sau sigla companiei pe site-ul evenimentului, la categoria sponsori
+							li Logo-ul sau sigla companiei pe toate materialele printate distribuite cu ocazia evenimentului
+							li Menționarea calității de Sponsor Silver în descrierea evenimentului de pe pagina oficială de Facebook
+							li Logo-ul sau sigla companiei sub forma de watermark pe toate pozele de la eveniment, publicate pe pagina oficială de Facebook
+							li Posibilitatea de expunere a produselor dupa caz
+							li Mulțumiri speciale aduse companiei în calitate de Sponsor Silver la festivitatea de închidere a evenimentului
+						a.btn.btn-success.btn-lg.centre(href='mailto:contact@jdl.ro?subject=SILVER-sponsorship') Aplică

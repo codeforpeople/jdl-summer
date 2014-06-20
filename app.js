@@ -25,6 +25,7 @@ routes.auth = require('./routes/auth');
 routes.apply = require('./routes/apply');
 routes.contact = require('./routes/contact');
 routes.update = require('./routes/update');
+routes.sponsorships = require('./routes/sponsorships');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -77,6 +78,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', { scope: ['
 	res.end('<script>window.close();</script>');
 });
 app.get('/auth', routes.auth);
+app.get('/sponsorizari', routes.sponsorships);
 
 app.post('/sync', routes.sync);
 app.post('/check', routes.check);
