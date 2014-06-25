@@ -1,5 +1,47 @@
 [
 	{
+		"id": "ideasforbraila",
+		"name": "Ideas for Braila",
+		"shortDescription": "Dezvoltarea unei idei și a unui plan de afaceri pentru un start-up în Brăila",
+		"longDescription": "Brăila este un oraș nici pe departe perfect. Cu toate că oricine poate constata asta, nu oricine poate face ceva pentru a schimba orașul în care locuim. Idei de îmbunătățire se pot găsi, este nevoie de minți iscusite, mult curaj și entuziasm. Dacă vrei să îți aduci contribuția la dezvoltarea acestui oraș, acum te poți implica alături de o echipă de studenți experimentați și dornici să inoveze la rândul lor.",
+		"coverPhoto": "/images/projects/covers/ideas_for_braila.jpg",
+		"mentor": {
+			"name": "Teodora Teodorescu",
+			"email": "teodorateodorescu10@gmail.com"
+		},
+		"skillsNeeded": [
+			"creativitate, entuziasm, atenție la detalii, inițiativă", "dorința și pasiunea de a lucra într-o echipă super faină și de a schimba ceva pe plan local", "cunoașterea limbii engleze la un nivel mediu (scris și vorbit, pentru că majoritatea etapelor proiectului vor implica termeni în limba engleză)"
+		]
+	},
+	{
+		"id": "scaleupanddown",
+		"name": "Scaling up and down",
+		"shortDescription": "Aprecierea unei scări, de la 1:1 până la 1:10",
+		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de a utiliza spațiul doar pentru strictul necesar.",
+		"coverPhoto": "/images/projects/covers/scale_up_and_down.jpg",
+		"mentor": {
+			"name": "Cosmin Chirpac",
+			"email": "cosminchirpac@icloud.com"
+		},
+		"skillsNeeded": [
+			"cunoștințe de matematică simplă", "devotament"
+		]
+	},
+	{
+		"id": "renderingtutorials",
+		"name": "Rendering tutorials",
+		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
+		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
+		"coverPhoto": "/images/projects/covers/rendering_tutorials.jpg",
+		"mentor": {
+			"name": "Cosmin Chirpac",
+			"email": "cosminchirpac@icloud.com"
+		},
+		"skillsNeeded": [
+			"aptitudini pe calculator", "devotament"
+		]
+	},
+	{
 		"id": "cmdchat",
 		"name": "Ancient chat",
 		"shortDescription": "Aplicație chat simplă în terminal text realizată în C/C++",
@@ -39,34 +81,6 @@
 		},
 		"skillsNeeded": [
 			"entuziasm", "cunoștințe de fizică elementară", "cunoștințe de trigonometrie", "pasiune pentru inginerie și programarea low-level"
-		]
-	},
-	{
-		"id": "scaleupanddown",
-		"name": "Scaling up and down",
-		"shortDescription": "Aprecierea unei scări, de la 1:1 până la 1:10",
-		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de a utiliza spațiul doar pentru strictul necesar.",
-		"coverPhoto": "/images/projects/covers/scale_up_and_down.jpg",
-		"mentor": {
-			"name": "Cosmin Chirpac",
-			"email": "cosminchirpac@icloud.com"
-		},
-		"skillsNeeded": [
-			"cunoștințe de matematică simplă", "devotament"
-		]
-	},
-	{
-		"id": "renderingtutorials",
-		"name": "Rendering tutorials",
-		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
-		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
-		"coverPhoto": "/images/projects/covers/rendering_tutorials.jpg",
-		"mentor": {
-			"name": "Cosmin Chirpac",
-			"email": "cosminchirpac@icloud.com"
-		},
-		"skillsNeeded": [
-			"aptitudini pe calculator", "devotament"
 		]
 	},
 	{
