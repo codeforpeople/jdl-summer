@@ -322,6 +322,7 @@ section .page .section-title.inverted:after {
 .mentor {
 	position: relative;
 	text-align: center;
+	margin-bottom: 40px;
 }
 
 .mentor-photo-box {
