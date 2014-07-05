@@ -28,17 +28,17 @@
 		]
 	},
 	{
-		"id": "renderingtutorials",
-		"name": "Rendering tutorials",
-		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
-		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
-		"coverPhoto": "/images/projects/covers/rendering_tutorials.jpg",
+		"id": "research",
+		"name": "Becoming a researcher...",
+		"shortDescription": "...instead of a doctor. Sfaturi despre lumea cercetării, oportunități",
+		"longDescription": "Dacă îți place biologia și nu vrei neapărat să îți pierzi următorii 6 ani în Carol Davila (poate medicina nu e ceea ce îți dorești, dar este singura opțiune la care te-ai gândit) atunci ar trebui să consideri o carieră în cercetare. Eu sunt bucuroasă să îți explic de ce cercetarea este chiar o idee mai bună și câte oportunități ai putea avea.",
+		"coverPhoto": "/images/projects/covers/research.jpg",
 		"mentor": {
-			"name": "Cosmin Chirpac",
-			"email": "cosminchirpac@icloud.com"
+			"name": "Irina Lupu",
+			"email": "irina_elena66@yahoo.com"
 		},
 		"skillsNeeded": [
-			"aptitudini pe calculator", "devotament"
+			"interes pentru biologie (asta include totul: de la anatomie și fiziologie până la biologie moleculară și plant science)", "entuziasm"
 		]
 	},
 	{
@@ -81,6 +81,20 @@
 		},
 		"skillsNeeded": [
 			"entuziasm", "cunoștințe de fizică elementară", "cunoștințe de trigonometrie", "pasiune pentru inginerie și programarea low-level"
+		]
+	},
+	{
+		"id": "renderingtutorials",
+		"name": "Rendering tutorials",
+		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
+		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
+		"coverPhoto": "/images/projects/covers/rendering_tutorials.jpg",
+		"mentor": {
+			"name": "Cosmin Chirpac",
+			"email": "cosminchirpac@icloud.com"
+		},
+		"skillsNeeded": [
+			"aptitudini pe calculator", "devotament"
 		]
 	},
 	{
