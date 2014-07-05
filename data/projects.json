@@ -1,6 +1,7 @@
 [
 	{
 		"id": "ideasforbraila",
+		"class": "business-project",
 		"name": "Ideas for Braila",
 		"shortDescription": "Dezvoltarea unei idei și a unui plan de afaceri pentru un start-up în Brăila",
 		"longDescription": "Brăila este un oraș nici pe departe perfect. Cu toate că oricine poate constata asta, nu oricine poate face ceva pentru a schimba orașul în care locuim. Idei de îmbunătățire se pot găsi, este nevoie de minți iscusite, mult curaj și entuziasm. Dacă vrei să îți aduci contribuția la dezvoltarea acestui oraș, acum te poți implica alături de o echipă de studenți experimentați și dornici să inoveze la rândul lor.",
@@ -15,6 +16,7 @@
 	},
 	{
 		"id": "scaleupanddown",
+		"class": "architecture-project",
 		"name": "Scaling up and down",
 		"shortDescription": "Aprecierea unei scări, de la 1:1 până la 1:10",
 		"longDescription": "Proiectarea unui spațiu de 2400x4800 care va fi o locuință pentru o singură persoană. Scopul este de a utiliza spațiul doar pentru strictul necesar.",
@@ -29,6 +31,7 @@
 	},
 	{
 		"id": "research",
+		"class": "medicine-project",
 		"name": "Becoming a researcher...",
 		"shortDescription": "...instead of a doctor. Sfaturi despre lumea cercetării, oportunități",
 		"longDescription": "Dacă îți place biologia și nu vrei neapărat să îți pierzi următorii 6 ani în Carol Davila (poate medicina nu e ceea ce îți dorești, dar este singura opțiune la care te-ai gândit) atunci ar trebui să consideri o carieră în cercetare. Eu sunt bucuroasă să îți explic de ce cercetarea este chiar o idee mai bună și câte oportunități ai putea avea.",
@@ -43,6 +46,7 @@
 	},
 	{
 		"id": "cmdchat",
+		"class": "it-project",
 		"name": "Ancient chat",
 		"shortDescription": "Aplicație chat simplă în terminal text realizată în C/C++",
 		"longDescription": "Este din ce în ce mai clar faptul că tot mai multe aplicații din ziua de azi devin dependente de internet. Comunicarea în rețea și schimbul de informații în timp real stau la baza a majoritatea aplicațiilor pe care le folosim de zi cu zi, dar mai ales în industrie. Proiectul își propune construirea unui chat simplu în terminal (linie de comandă, ecran negru cu text sau cum vreți să îl numiți) care să demonstreze cel mai simplu model de comunicare în rețea.",
@@ -57,6 +61,7 @@
 	},
 	{
 		"id": "graphics",
+		"class": "it-project",
 		"name": "Ancient pixels",
 		"shortDescription": "Joc grafic simplu sau lume grafică realizată în C/C++ cu ajutorul bibleotecii OpenGL",
 		"longDescription": "Jocurile pe care le jucăm astăzi dispun de grafică și realism extraordinare. Totuși, aceste lucruri nu au fost mereu așa. Acest proiect își propune o călătorie în timp în lumea graficii pe calculator, precum și primii pași în materie de proiectarea și dezvoltarea jocurilor grafice",
@@ -71,6 +76,7 @@
 	},
 	{
 		"id": "aai",
+		"class": "it-project",
 		"name": "Ancient Intelligence",
 		"shortDescription": "Aplicație care crează iluzia unui cub 3D care se rotește în funcție de mișcările utilizatorului",
 		"longDescription": "Inteligența artificială este un domeniu extrem de vast, având aplicații în aproape orice domeniu. Proiectul acesta propune o privire de ansamblu asupra unui subdomeniu, Computer Vision, care se ocupă cu extragerea informațiilor relevante din imagini și video. Cu ajutorul unei camere web putem avea imagini în timp real cu poziția utilizatorului, din care se pot extrage informații despre orientarea capului acestuia. În funcție de orientarea capului, aplicația va roti un cub pe ecran, astfel încât dacă utilizatorul se întoarce spre stânga, acesta va vedea partea stângă a cubului, și invers.",
@@ -85,6 +91,7 @@
 	},
 	{
 		"id": "renderingtutorials",
+		"class": "architecture-project",
 		"name": "Rendering tutorials",
 		"shortDescription": "Diferite tutoriale pentru computer software în arhitectură",
 		"longDescription": "Un proiect, pentru a fi înteles de client, trebuie reprezentat cât mai bine vizual, nu doar tehnic. Tutorialele vor fi AutoCAD, Photoshop, Rhinoceros, și eventual altele.",
@@ -99,6 +106,7 @@
 	},
 	{
 		"id": "nodejschat",
+		"class": "it-project",
 		"name": "NodeJS Chat",
 		"shortDescription": "Aplicație chat simplă în browser realizată cu ajutorul platformei NodeJS",
 		"longDescription": "Facebook este doar unul dintre site-urile care oferă live chat utilizatorilor săi, iar acest lucru a accelerat succesul acestuia fără îndoială. Nevoia de comunicare crează cerere pentru astfel de aplicații, iar tehnologiile din ziua de azi fac din ce în ce mai ușoară dezvoltarea de astfel de servicii. NodeJS este o tehnologie relativ recentă dar cu un potențial enorm, care vine ca o alternativă la restul tehnologiile de back-end (cum ar fi PHP, Java, Python). Bazată pe JavaScript, platforma este extrem de puternică și facilitează dezvoltarea serviciilor precum chat-ul.",
@@ -113,6 +121,7 @@
 	},
 	{
 		"id": "browsergame",
+		"class": "it-project",
 		"name": "Browser Based Game",
 		"shortDescription": "Joc RPG în browser bazat pe text (ex: triburile, erepublik, travian)",
 		"longDescription": "Cele mai simple jocuri în browser sunt cele bazate pe text (browser based text role playing games - BBRPG). Acestea fac uz doar de tehnologii de bază, cum ar fi HTML, CSS, JavaScript, PHP, MySQL. Cu toate ca sunt departe de grafică extraordinară sau realism, jocurile în browser de acest gen încă sunt apreciate. Exemple de astfel de jocuri sunt MonstersGame sau BattleKnights, eRepublik sau Travian.<br/><br/>In cadrul proiectului vom alegea tema joculuri ce il vom crea, vom folosi technologii si resurse open source (Bootstrap, MySQL, PHP,..), vom lucra in echipe si vom organiza codul folosind GIT (github).",
@@ -127,6 +136,7 @@
 	},
 	{
 		"id": "wordpress",
+		"class": "it-project",
 		"name": "Wordpress Development",
 		"shortDescription": "Wordpress a evoluat de la o simpla platforma de blogging la Content Management System",
 		"longDescription": "Wordpress a evoluat rapid si este in continua dezvoltare, avand o popularitate extraordinara. In cadrul proiectului vom modifica un theme existent pentru platforma si vom crea plugin-uri (module ce adauga functionalitati platformei) de la zero. Technologiile folosite sunt PHP, SQL, HTML, CSS && Wordpress.",

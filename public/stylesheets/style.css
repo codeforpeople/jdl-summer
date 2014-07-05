@@ -319,6 +319,42 @@ section .page .section-title.inverted:after {
 	margin-top: 150px;
 }
 
+.category {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+	display: inline-block;
+}
+
+.project-info:before {
+	display: inline-block;
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	padding: 5px 20px;
+	color: #fff;
+}
+
+.it-project:before {
+	background: #2f4f4f;
+	content: "IT";
+}
+
+.medicine-project:before {
+	background: brown;
+	content: "Medicină";
+}
+
+.business-project:before {
+	background: green;
+	content: "Antreprenoriat";
+}
+
+.architecture-project:before {
+	background: purple;
+	content: "Arhitectură";
+}
+
 .mentor {
 	position: relative;
 	text-align: center;
