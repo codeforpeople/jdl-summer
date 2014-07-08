@@ -355,6 +355,13 @@ section .page .section-title.inverted:after {
 	content: "Arhitectură";
 }
 
+.bonus-project:before {
+	background: lime;
+	font-weight: bold;
+	color: #333;
+	content: "BONUS";
+}
+
 .mentor {
 	position: relative;
 	text-align: center;
