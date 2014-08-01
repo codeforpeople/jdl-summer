@@ -65,7 +65,9 @@ block content
 							.test
 								.controls
 									button.btn-default.btn-lg.btn-project-details(data-toggle='modal', data-target='#project-details-modal') Detalii
-									button.btn-success.btn-lg.btn-project-apply Aplică
+									.info-box(style='color: #fff')
+										h4 Aplicațiile s-au încheiat
+									//button.btn-success.btn-lg.btn-project-apply(disabled) Aplicațiile s-au încheiat
 							.tile-cover
 							img.project-cover(src='#{project.coverPhoto}')
 							.project-info(class='#{project.class}')
@@ -158,7 +160,7 @@ block content
 				.modal-body
 					p Project description
 				.modal-footer
-					button.btn.btn-success.btn-apply2(type='button') Aplică
+					//button.btn.btn-success.btn-apply2(type='button') Aplică
 					button.btn.btn-default(type='button', data-dismiss='modal') Înapoi
 
 	.modal.fade#project-apply-modal(tab-index='-1', role='dialog', aria-hidden='true')
@@ -166,7 +168,7 @@ block content
 			.modal-content
 				#auth-modal
 				.modal-footer
-					button.btn.btn-success.btn-send-application(type='button') Trimite
+					//button.btn.btn-success.btn-send-application(type='button') Trimite
 					button.btn.btn-default(type='button', data-dismiss='modal') Închide
 
 	.modal.fade.styled-modal#contact-modal(tab-index='-1', role='dialog', aria-hidden='true')
