@@ -26,6 +26,7 @@ routes.apply = require('./routes/apply');
 routes.contact = require('./routes/contact');
 routes.update = require('./routes/update');
 routes.sponsorships = require('./routes/sponsorships');
+routes.talks = require('./routes/talks');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -79,6 +80,7 @@ app.get('/auth/facebook/callback', passport.authenticate('facebook', { scope: ['
 });
 app.get('/auth', routes.auth);
 app.get('/sponsorizari', routes.sponsorships);
+app.get('/talks', routes.talks);
 
 app.post('/sync', routes.sync);
 app.post('/check', routes.check);

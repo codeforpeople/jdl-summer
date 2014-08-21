@@ -42,6 +42,11 @@ a {
 	opacity: .5;
 }
 
+#map-canvas {
+	width: 40%;
+	height: 300px;
+}
+
 section#cover {
 	position: relative;
 	height: 731px;
@@ -56,6 +61,10 @@ section#cover {
 	background-attachment: fixed;
 }
 
+section#cover.talks-cover {
+	background-image: url('../images/talks.jpg');
+}
+
 section#blog {
 	background-color: #428bca;
 }
@@ -64,11 +73,17 @@ section#about {
 	background-color: #eee;
 }
 
-section#projects {
+section#projects, section#location {
 	background-color: #dbdbdb;
 }
 
-section#mentors {
+section#location {
+	background: url('../images/talks/bkmap.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+section#mentors, section#speakers {
 	background-color: #1abc9c;
 }
 
@@ -79,6 +94,43 @@ section#contact {
 .inverted, .inverted > * {
 	color: #fff !important;
 	border-color: #fff !important;
+}
+
+.custom-container {
+	width: 100%;
+	margin-top: 60px;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 30px !important;
+}
+
+.speaker-box {
+	display: inline-block;
+	margin: 20px 0;
+}
+
+.speaker-frame {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+.speaker-info {
+	margin-left: 50px;
+	float: left;
+	width: calc(100% - 350px);
+	word-wrap: normal;
+	/*margin-top: 20px;*/
+}
+
+h3.speaker-name {
+	font-weight: 300;
+	font-size: 30px;
+}
+
+img.speaker-photo {
+	width: 200px;
+	border-radius: 200px;
 }
 
 nav.navigation-bar {
@@ -194,6 +246,10 @@ section .page .section-title:after {
 	border-bottom: 2px solid #999;
 }
 
+.tarlan {
+	text-align: center;
+}
+
 section .page .section-title.inverted:after {
 	border-bottom: 2px solid #fff;
 }
@@ -211,6 +267,10 @@ section .page .section-title.inverted:after {
 	background-color: rgba(238, 238, 238, 0);
 	border: 1px solid #eee;
 	-webkit-transition-duration: .1s;
+}
+
+a.btn-apply {
+	display: inline-block;
 }
 
 .btn-apply:hover, .btn-send-message:hover {
