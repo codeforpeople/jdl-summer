@@ -30,6 +30,7 @@ routes.talks = require('./routes/talks');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+app.set('ip', process.env.IP || '127.0.0.1');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
@@ -88,6 +89,6 @@ app.post('/apply', routes.apply);
 app.post('/contact', routes.contact);
 app.post('/g/live/update', routes.update);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('ip'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
