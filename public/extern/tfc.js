@@ -35,15 +35,18 @@
 			center: { lat: 0, lng: 0}
 		};
 
+
+		map = new google.maps.Map(mapCanvas, mapOptions);
+		
 		kmlUrl = '/extern/tfc.kml';
 		kmlOptions = {
 			map: map,
 			preserveViewport: true,
 			suppressInfoWindows: true
 		};
-
-		map = new google.maps.Map(mapCanvas, mapOptions);
+		
 		kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
+		
 		geocoder = new google.maps.Geocoder();
 		userPosition = navigator.geolocation.getCurrentPosition(locationReady);
 	};
