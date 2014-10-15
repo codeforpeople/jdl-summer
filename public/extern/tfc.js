@@ -42,7 +42,7 @@
 		kmlOptions = {
 			map: map,
 			preserveViewport: true,
-			suppressInfoWindows: true
+			suppressInfoWindows: false
 		};
 		
 		kmlLayer = new google.maps.KmlLayer(kmlUrl, kmlOptions);
