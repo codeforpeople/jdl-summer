@@ -38,7 +38,7 @@
 
 		map = new google.maps.Map(mapCanvas, mapOptions);
 		
-		kmlUrl = '/extern/tfc.kml';
+		kmlUrl = 'http://www.jdl.ro/extern/tfc.kml';
 		kmlOptions = {
 			map: map,
 			preserveViewport: true,
