@@ -1,5 +1,5 @@
 var talks = function (req, res) {
-	res.render('talks', { title: "JDTalks" });
+	res.redirect('http://talks.jdl.ro');
 }
 
 module.exports = talks;
