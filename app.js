@@ -13,6 +13,14 @@ var path = require('path');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
+// migration to express 4
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var morgan = require('morgan');
+var methodOverride = require('method-override');
+var session = require('express-session');
+var errorHandler = require('errorhandler');
+
 var app = express();
 
 var FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID.toString();
@@ -34,17 +42,14 @@ app.set('ip', process.env.IP || '127.0.0.1');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-app.use(express.logger('dev'));
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(express.session({ secret: 'keyboard cat' }));
+app.use(morgan('combined'));
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(methodOverride('X-HTTP-Method-Override'));
+app.use(session({ secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 passport.serializeUser(function(user, done) {
@@ -69,7 +74,7 @@ passport.use(new FacebookStrategy({
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(errorHandler());
 }
 
 app.get('/', routes.index);
